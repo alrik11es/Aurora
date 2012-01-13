@@ -9,9 +9,11 @@ Public Class frmMysqlConnect
         Try
             conn.exist()
             btnGuardar.Enabled = True
+            MsgBox("La conexión se ha realizado con éxito", MsgBoxStyle.Information, "Todo correcto")
         Catch ex As Exception
             MsgBox("No se ha podido realizar la prueba. Por favor compruebe los datos" &
-                   " y asegurese de tener permisos en el servidor. Mensaje: " & ex.Message)
+                   " y asegurese de tener permisos en el servidor. Mensaje: " & ex.Message,
+                   MsgBoxStyle.Exclamation, "Error")
         End Try
 
     End Sub
@@ -24,6 +26,7 @@ Public Class frmMysqlConnect
         SaveSetting("aurora", "dbinfo", "user", conn.user)
         SaveSetting("aurora", "dbinfo", "password", conn.password)
         frmPrincipal.menuItemConectar.Enabled = True
+        Me.Close()
     End Sub
 
     Private Sub frmMysqlConnect_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
@@ -55,5 +58,9 @@ Public Class frmMysqlConnect
     Private Sub compruebaCambios_TextChanged(sender As System.Object, e As System.EventArgs) Handles txtHost.TextChanged, txtDatabase.TextChanged,
         txtPassword.TextChanged, txtPort.TextChanged, txtUser.TextChanged
         btnGuardar.Enabled = False
+    End Sub
+
+    Private Sub enlace_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles enlace.LinkClicked
+        System.Diagnostics.Process.Start("http://www.mysql.com/downloads/connector/odbc/")
     End Sub
 End Class

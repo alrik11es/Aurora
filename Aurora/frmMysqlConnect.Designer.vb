@@ -37,12 +37,14 @@ Partial Class frmMysqlConnect
         Me.txtUser = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnBorrar = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.enlace = New System.Windows.Forms.LinkLabel()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnTest
         '
-        Me.btnTest.Location = New System.Drawing.Point(119, 174)
+        Me.btnTest.Location = New System.Drawing.Point(118, 202)
         Me.btnTest.Name = "btnTest"
         Me.btnTest.Size = New System.Drawing.Size(75, 35)
         Me.btnTest.TabIndex = 0
@@ -66,7 +68,7 @@ Partial Class frmMysqlConnect
         'btnGuardar
         '
         Me.btnGuardar.Enabled = False
-        Me.btnGuardar.Location = New System.Drawing.Point(200, 174)
+        Me.btnGuardar.Location = New System.Drawing.Point(199, 202)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(75, 35)
         Me.btnGuardar.TabIndex = 3
@@ -84,6 +86,8 @@ Partial Class frmMysqlConnect
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.enlace)
+        Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.txtDatabase)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -96,7 +100,7 @@ Partial Class frmMysqlConnect
         Me.GroupBox1.Controls.Add(Me.txtHost)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(287, 156)
+        Me.GroupBox1.Size = New System.Drawing.Size(287, 184)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos de conexión"
@@ -139,6 +143,7 @@ Partial Class frmMysqlConnect
         '
         Me.txtPassword.Location = New System.Drawing.Point(99, 100)
         Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(175, 20)
         Me.txtPassword.TabIndex = 7
         '
@@ -160,18 +165,37 @@ Partial Class frmMysqlConnect
         '
         'btnBorrar
         '
-        Me.btnBorrar.Location = New System.Drawing.Point(38, 174)
+        Me.btnBorrar.Location = New System.Drawing.Point(37, 202)
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(75, 35)
         Me.btnBorrar.TabIndex = 6
         Me.btnBorrar.Text = "Borrar datos del registro"
         Me.btnBorrar.UseVisualStyleBackColor = True
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(6, 158)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(122, 13)
+        Me.Label6.TabIndex = 12
+        Me.Label6.Text = "Para conectar necesitas"
+        '
+        'enlace
+        '
+        Me.enlace.AutoSize = True
+        Me.enlace.Location = New System.Drawing.Point(125, 158)
+        Me.enlace.Name = "enlace"
+        Me.enlace.Size = New System.Drawing.Size(127, 13)
+        Me.enlace.TabIndex = 13
+        Me.enlace.TabStop = True
+        Me.enlace.Text = "MySQL ODBC  5.1 Driver"
+        '
         'frmMysqlConnect
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(312, 219)
+        Me.ClientSize = New System.Drawing.Size(312, 243)
         Me.Controls.Add(Me.btnBorrar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnGuardar)
@@ -201,4 +225,6 @@ Partial Class frmMysqlConnect
     Friend WithEvents txtUser As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents btnBorrar As System.Windows.Forms.Button
+    Friend WithEvents enlace As System.Windows.Forms.LinkLabel
+    Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class

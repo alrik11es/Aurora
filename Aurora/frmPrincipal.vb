@@ -13,7 +13,9 @@
     Private Sub frmPrincipal_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
 
         Dim conn As MySQLConexion = New MySQLConexion()
-        If conn.exist Then
+        If conn.exist() Then
+            conexion = conn
+            conexion.connect()
             Me.menuItemConectar.Enabled = True
             frmLogin.MdiParent = Me
             frmLogin.Show()
