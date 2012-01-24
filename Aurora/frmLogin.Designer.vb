@@ -125,6 +125,7 @@ Partial Class frmLogin
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmLogin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Conectar..."
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
