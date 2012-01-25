@@ -37,3 +37,10 @@ C:\work\aurora\Aurora\obj\x86\Debug\Aurora.frmPrincipal.resources
 C:\work\aurora\Aurora\obj\x86\Debug\Aurora.frmLogin.resources
 C:\work\aurora\Aurora\obj\x86\Debug\Interop.ADODB.dll
 C:\Work\Proyectos\Aurora\Aurora\obj\x86\Debug\Aurora.frmListaLocalizacion.resources
+C:\proyectosTRABAJOeg\Aurora2\Aurora\obj\x86\Debug\Interop.ADODB.dll
+C:\proyectosTRABAJOeg\Aurora2\Aurora\obj\x86\Debug\Interop.WMPLib.dll
+C:\proyectosTRABAJOeg\Aurora2\Aurora\obj\x86\Debug\AxInterop.WMPLib.dll
+C:\proyectosTRABAJOeg\Aurora2\Aurora\obj\x86\Debug\Aurora.vbproj.ResolveComReference.cache
+C:\proyectosTRABAJOeg\Aurora2\Aurora\obj\x86\Debug\Aurora.exe
+C:\proyectosTRABAJOeg\Aurora2\Aurora\obj\x86\Debug\Aurora.xml
+C:\proyectosTRABAJOeg\Aurora2\Aurora\obj\x86\Debug\Aurora.pdb
