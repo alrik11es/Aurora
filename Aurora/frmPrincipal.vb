@@ -24,8 +24,19 @@
     End Sub
 
     Private Sub menuItemConectar_Click(sender As System.Object, e As System.EventArgs) Handles menuItemConectar.Click
-        conexion = New MySQLConexion()
-        frmLogin.MdiParent = Me
-        frmLogin.Show()
+
+        If menuItemConectar.Text <> "Desconectar" Then
+            conexion = New MySQLConexion()
+            frmLogin.MdiParent = Me
+            frmLogin.Show()
+        Else
+
+        End If
+        
+    End Sub
+
+    Private Sub LocalizaciónToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles LocalizaciónToolStripMenuItem.Click
+        frmListaLocalizacion.MdiParent = Me
+        frmListaLocalizacion.Show()
     End Sub
 End Class

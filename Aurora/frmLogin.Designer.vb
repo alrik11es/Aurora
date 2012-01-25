@@ -68,6 +68,7 @@ Partial Class frmLogin
         Me.txtPassword.Location = New System.Drawing.Point(120, 235)
         Me.txtPassword.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(252, 27)
         Me.txtPassword.TabIndex = 3
         '
@@ -108,6 +109,7 @@ Partial Class frmLogin
         '
         'frmLogin
         '
+        Me.AcceptButton = Me.btnEntrar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(383, 317)

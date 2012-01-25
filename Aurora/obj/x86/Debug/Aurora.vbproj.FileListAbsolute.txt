@@ -36,3 +36,4 @@ C:\work\aurora\Aurora\obj\x86\Debug\Aurora.frmMysqlConnect.resources
 C:\work\aurora\Aurora\obj\x86\Debug\Aurora.frmPrincipal.resources
 C:\work\aurora\Aurora\obj\x86\Debug\Aurora.frmLogin.resources
 C:\work\aurora\Aurora\obj\x86\Debug\Interop.ADODB.dll
+C:\Work\Proyectos\Aurora\Aurora\obj\x86\Debug\Aurora.frmListaLocalizacion.resources
