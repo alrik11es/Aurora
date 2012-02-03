@@ -81,6 +81,12 @@
     <Compile Include="localizaciones\ejemploGRID.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="localizaciones\frmAddLocalizacion.Designer.vb">
+      <DependentUpon>frmAddLocalizacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="localizaciones\frmAddLocalizacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="localizaciones\frmListaLocalizacion.Designer.vb">
       <DependentUpon>frmListaLocalizacion.vb</DependentUpon>
     </Compile>
@@ -126,6 +132,9 @@
   <ItemGroup>
     <EmbeddedResource Include="localizaciones\ejemploGRID.resx">
       <DependentUpon>ejemploGRID.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="localizaciones\frmAddLocalizacion.resx">
+      <DependentUpon>frmAddLocalizacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="localizaciones\frmListaLocalizacion.resx">
       <DependentUpon>frmListaLocalizacion.vb</DependentUpon>

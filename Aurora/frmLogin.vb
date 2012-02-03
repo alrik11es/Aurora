@@ -6,7 +6,7 @@
 
         If Not recordset.EOF Then
             frmPrincipal.menuItemVentana.Enabled = True
-            frmPrincipal.menuItemConectar.Text = "Desconectar"
+            frmPrincipal.menuItemConectar.Text = "Desconectar..."
             Me.Close()
         Else
             MsgBox("El usuario y/o la contraseña no existe", MsgBoxStyle.Information, "Error")
