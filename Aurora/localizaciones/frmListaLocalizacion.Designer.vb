@@ -25,9 +25,9 @@ Partial Class frmListaLocalizacion
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmListaLocalizacion))
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnEditar = New System.Windows.Forms.Button()
+        Me.btnBorrar = New System.Windows.Forms.Button()
+        Me.btnVer = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -43,9 +43,9 @@ Partial Class frmListaLocalizacion
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.Button4)
-        Me.Panel1.Controls.Add(Me.Button3)
-        Me.Panel1.Controls.Add(Me.Button2)
+        Me.Panel1.Controls.Add(Me.btnEditar)
+        Me.Panel1.Controls.Add(Me.btnBorrar)
+        Me.Panel1.Controls.Add(Me.btnVer)
         Me.Panel1.Controls.Add(Me.btnNuevo)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -53,32 +53,32 @@ Partial Class frmListaLocalizacion
         Me.Panel1.Size = New System.Drawing.Size(526, 40)
         Me.Panel1.TabIndex = 1
         '
-        'Button4
+        'btnEditar
         '
-        Me.Button4.Location = New System.Drawing.Point(188, 5)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(86, 29)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Editar"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnEditar.Location = New System.Drawing.Point(188, 5)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(86, 29)
+        Me.btnEditar.TabIndex = 3
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnBorrar
         '
-        Me.Button3.Location = New System.Drawing.Point(371, 5)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(86, 29)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Borrar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnBorrar.Location = New System.Drawing.Point(371, 5)
+        Me.btnBorrar.Name = "btnBorrar"
+        Me.btnBorrar.Size = New System.Drawing.Size(86, 29)
+        Me.btnBorrar.TabIndex = 2
+        Me.btnBorrar.Text = "Borrar"
+        Me.btnBorrar.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnVer
         '
-        Me.Button2.Location = New System.Drawing.Point(96, 5)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(86, 29)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Ver"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnVer.Location = New System.Drawing.Point(96, 5)
+        Me.btnVer.Name = "btnVer"
+        Me.btnVer.Size = New System.Drawing.Size(86, 29)
+        Me.btnVer.TabIndex = 1
+        Me.btnVer.Text = "Ver"
+        Me.btnVer.UseVisualStyleBackColor = True
         '
         'btnNuevo
         '
@@ -105,8 +105,8 @@ Partial Class frmListaLocalizacion
     End Sub
     Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents btnEditar As System.Windows.Forms.Button
+    Friend WithEvents btnBorrar As System.Windows.Forms.Button
+    Friend WithEvents btnVer As System.Windows.Forms.Button
     Friend WithEvents btnNuevo As System.Windows.Forms.Button
 End Class
