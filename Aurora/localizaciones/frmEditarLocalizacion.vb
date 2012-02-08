@@ -1,6 +1,6 @@
 ﻿Imports Aurora.MySQL
 
-Public Class frmEditarLocalizacion
+Public Class frmAddLocalizacion
 
     Private Sub btnCrearLocalizacion_Click(sender As System.Object, e As System.EventArgs) Handles btnCrearLocalizacion.Click
 

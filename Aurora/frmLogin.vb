@@ -2,7 +2,7 @@
 
     Private Sub btnEntrar_Click(sender As System.Object, e As System.EventArgs) Handles btnEntrar.Click
         Dim recordset As ADODB.Recordset = frmPrincipal.conexion.exec("SELECT * FROM tecnico WHERE usuario LIKE '" &
-                                   txtUsuario.Text & "' AND password = '" & txtPassword.Text & "' ")
+                                   escape(txtUsuario.Text) & "' AND password = '" & escape(txtPassword.Text) & "' ")
 
         If Not recordset.EOF Then
             frmPrincipal.menuItemVentana.Enabled = True

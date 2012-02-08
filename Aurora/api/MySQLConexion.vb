@@ -52,7 +52,7 @@
             Return False
         End Try
     End Function
-    
+
 
     Sub connect()
         Me.conn = New ADODB.Connection

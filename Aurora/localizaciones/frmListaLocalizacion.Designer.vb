@@ -22,24 +22,17 @@ Partial Class frmListaLocalizacion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmListaLocalizacion))
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnBorrar = New System.Windows.Forms.Button()
         Me.btnVer = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.Iconos = New System.Windows.Forms.ImageList(Me.components)
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'ListBox1
-        '
-        Me.ListBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(0, 40)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(526, 406)
-        Me.ListBox1.TabIndex = 0
         '
         'Panel1
         '
@@ -89,12 +82,32 @@ Partial Class frmListaLocalizacion
         Me.btnNuevo.Text = "Nuevo"
         Me.btnNuevo.UseVisualStyleBackColor = True
         '
+        'ListView1
+        '
+        Me.ListView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ListView1.GridLines = True
+        Me.ListView1.Location = New System.Drawing.Point(0, 40)
+        Me.ListView1.MultiSelect = False
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(526, 406)
+        Me.ListView1.SmallImageList = Me.Iconos
+        Me.ListView1.TabIndex = 4
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.List
+        '
+        'Iconos
+        '
+        Me.Iconos.ImageStream = CType(resources.GetObject("Iconos.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.Iconos.TransparentColor = System.Drawing.Color.Transparent
+        Me.Iconos.Images.SetKeyName(0, "user_suit.ico")
+        Me.Iconos.Images.SetKeyName(1, "user_gray.ico")
+        '
         'frmListaLocalizacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(526, 446)
-        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmListaLocalizacion"
@@ -103,10 +116,11 @@ Partial Class frmListaLocalizacion
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents btnEditar As System.Windows.Forms.Button
     Friend WithEvents btnBorrar As System.Windows.Forms.Button
     Friend WithEvents btnVer As System.Windows.Forms.Button
     Friend WithEvents btnNuevo As System.Windows.Forms.Button
+    Friend WithEvents ListView1 As System.Windows.Forms.ListView
+    Friend WithEvents Iconos As System.Windows.Forms.ImageList
 End Class

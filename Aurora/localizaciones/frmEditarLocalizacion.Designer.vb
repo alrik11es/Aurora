@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmEditarLocalizacion
+Partial Class frmAddLocalizacion
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -191,7 +191,7 @@ Partial Class frmEditarLocalizacion
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmAddLocalizacion"
-        Me.Text = "Añadir localización"
+        Me.Text = "Editar localización"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
