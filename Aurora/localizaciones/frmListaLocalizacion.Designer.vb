@@ -24,76 +24,66 @@ Partial Class frmListaLocalizacion
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmListaLocalizacion))
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnEditar = New System.Windows.Forms.Button()
-        Me.btnBorrar = New System.Windows.Forms.Button()
-        Me.btnVer = New System.Windows.Forms.Button()
-        Me.btnNuevo = New System.Windows.Forms.Button()
-        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.listaLocalizaciones = New System.Windows.Forms.ListView()
+        Me.ctMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.mnEditar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnBorrar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.mnAddEquipo = New System.Windows.Forms.ToolStripMenuItem()
         Me.Iconos = New System.Windows.Forms.ImageList(Me.components)
-        Me.Panel1.SuspendLayout()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
+        Me.ctMenu.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Panel1
+        'listaLocalizaciones
         '
-        Me.Panel1.Controls.Add(Me.btnEditar)
-        Me.Panel1.Controls.Add(Me.btnBorrar)
-        Me.Panel1.Controls.Add(Me.btnVer)
-        Me.Panel1.Controls.Add(Me.btnNuevo)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(526, 40)
-        Me.Panel1.TabIndex = 1
+        Me.listaLocalizaciones.ContextMenuStrip = Me.ctMenu
+        Me.listaLocalizaciones.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.listaLocalizaciones.HideSelection = False
+        Me.listaLocalizaciones.Location = New System.Drawing.Point(0, 25)
+        Me.listaLocalizaciones.MultiSelect = False
+        Me.listaLocalizaciones.Name = "listaLocalizaciones"
+        Me.listaLocalizaciones.Size = New System.Drawing.Size(526, 421)
+        Me.listaLocalizaciones.SmallImageList = Me.Iconos
+        Me.listaLocalizaciones.TabIndex = 4
+        Me.listaLocalizaciones.UseCompatibleStateImageBehavior = False
+        Me.listaLocalizaciones.View = System.Windows.Forms.View.List
         '
-        'btnEditar
+        'ctMenu
         '
-        Me.btnEditar.Location = New System.Drawing.Point(188, 5)
-        Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(86, 29)
-        Me.btnEditar.TabIndex = 3
-        Me.btnEditar.Text = "Editar"
-        Me.btnEditar.UseVisualStyleBackColor = True
+        Me.ctMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnEditar, Me.mnBorrar, Me.ToolStripSeparator1, Me.mnAddEquipo})
+        Me.ctMenu.Name = "ctMenu"
+        Me.ctMenu.Size = New System.Drawing.Size(157, 98)
         '
-        'btnBorrar
+        'mnEditar
         '
-        Me.btnBorrar.Location = New System.Drawing.Point(371, 5)
-        Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(86, 29)
-        Me.btnBorrar.TabIndex = 2
-        Me.btnBorrar.Text = "Borrar"
-        Me.btnBorrar.UseVisualStyleBackColor = True
+        Me.mnEditar.Image = Global.Aurora.My.Resources.Resources.map_edit
+        Me.mnEditar.Name = "mnEditar"
+        Me.mnEditar.Size = New System.Drawing.Size(156, 22)
+        Me.mnEditar.Text = "Editar"
         '
-        'btnVer
+        'mnBorrar
         '
-        Me.btnVer.Location = New System.Drawing.Point(96, 5)
-        Me.btnVer.Name = "btnVer"
-        Me.btnVer.Size = New System.Drawing.Size(86, 29)
-        Me.btnVer.TabIndex = 1
-        Me.btnVer.Text = "Ver"
-        Me.btnVer.UseVisualStyleBackColor = True
+        Me.mnBorrar.Image = Global.Aurora.My.Resources.Resources.map_delete
+        Me.mnBorrar.Name = "mnBorrar"
+        Me.mnBorrar.Size = New System.Drawing.Size(156, 22)
+        Me.mnBorrar.Text = "Borrar"
         '
-        'btnNuevo
+        'ToolStripSeparator1
         '
-        Me.btnNuevo.Location = New System.Drawing.Point(4, 5)
-        Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(86, 29)
-        Me.btnNuevo.TabIndex = 0
-        Me.btnNuevo.Text = "Nuevo"
-        Me.btnNuevo.UseVisualStyleBackColor = True
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(153, 6)
         '
-        'ListView1
+        'mnAddEquipo
         '
-        Me.ListView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ListView1.GridLines = True
-        Me.ListView1.Location = New System.Drawing.Point(0, 40)
-        Me.ListView1.MultiSelect = False
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(526, 406)
-        Me.ListView1.SmallImageList = Me.Iconos
-        Me.ListView1.TabIndex = 4
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.List
+        Me.mnAddEquipo.Image = Global.Aurora.My.Resources.Resources.server_add
+        Me.mnAddEquipo.Name = "mnAddEquipo"
+        Me.mnAddEquipo.Size = New System.Drawing.Size(156, 22)
+        Me.mnAddEquipo.Text = "Agregar equipo"
         '
         'Iconos
         '
@@ -102,25 +92,68 @@ Partial Class frmListaLocalizacion
         Me.Iconos.Images.SetKeyName(0, "user_suit.ico")
         Me.Iconos.Images.SetKeyName(1, "user_gray.ico")
         '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(526, 25)
+        Me.ToolStrip1.TabIndex = 5
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = Global.Aurora.My.Resources.Resources.map_add
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton1.Text = "Añadir localización"
+        '
+        'ToolStripButton2
+        '
+        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton2.Image = Global.Aurora.My.Resources.Resources.map_edit
+        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton2.Name = "ToolStripButton2"
+        Me.ToolStripButton2.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton2.Text = "Editar localización"
+        '
+        'ToolStripButton3
+        '
+        Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton3.Image = Global.Aurora.My.Resources.Resources.map_delete
+        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton3.Name = "ToolStripButton3"
+        Me.ToolStripButton3.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton3.Text = "Borrar localización"
+        '
         'frmListaLocalizacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(526, 446)
-        Me.Controls.Add(Me.ListView1)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.listaLocalizaciones)
+        Me.Controls.Add(Me.ToolStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmListaLocalizacion"
         Me.Text = "Localizaciones"
-        Me.Panel1.ResumeLayout(False)
+        Me.ctMenu.ResumeLayout(False)
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents btnEditar As System.Windows.Forms.Button
-    Friend WithEvents btnBorrar As System.Windows.Forms.Button
-    Friend WithEvents btnVer As System.Windows.Forms.Button
-    Friend WithEvents btnNuevo As System.Windows.Forms.Button
-    Friend WithEvents ListView1 As System.Windows.Forms.ListView
+    Friend WithEvents listaLocalizaciones As System.Windows.Forms.ListView
     Friend WithEvents Iconos As System.Windows.Forms.ImageList
+    Friend WithEvents ctMenu As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents mnEditar As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents mnBorrar As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents mnAddEquipo As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
+    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripButton3 As System.Windows.Forms.ToolStripButton
 End Class

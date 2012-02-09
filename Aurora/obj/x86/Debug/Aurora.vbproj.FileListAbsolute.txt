@@ -47,3 +47,7 @@ C:\proyectosTRABAJOeg\Aurora2\Aurora\obj\x86\Debug\Aurora.pdb
 C:\work\aurora\Aurora\obj\x86\Debug\Aurora.frmListaLocalizacion.resources
 C:\work\aurora\Aurora\obj\x86\Debug\Aurora.sdssdfrmListaLocalizacion.resources
 C:\work\aurora\Aurora\obj\x86\Debug\Aurora.frmAddLocalizacion.resources
+C:\Work\Proyectos\aurora\Aurora\obj\x86\Debug\Aurora.frmAddLocalizacion.resources
+C:\Work\Proyectos\aurora\Aurora\obj\x86\Debug\Aurora.sdssdfrmListaLocalizacion.resources
+C:\Work\Proyectos\aurora\Aurora\obj\x86\Debug\Aurora.frmEditarLocalizacion.resources
+C:\Work\Proyectos\aurora\Aurora\obj\x86\Debug\Aurora.frmAddEquipo.resources

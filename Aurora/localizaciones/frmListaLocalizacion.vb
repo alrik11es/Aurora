@@ -7,11 +7,11 @@ Public Class frmListaLocalizacion
 
         Dim tabla As DataTable = New DataTable("Prueba")
         Dim adaptador As OleDb.OleDbDataAdapter = New OleDb.OleDbDataAdapter()
-        'Dim setter As DataSet = New DataSet()
-        ListView1.Clear()
+
+        listaLocalizaciones.Clear()
         Dim id As Integer
         Do Until recordset.EOF
-            'recordset.Fields("empresa").Value
+
             id = recordset.Fields("id").Value
             Dim item As ListViewItem = New ListViewItem()
             item.Tag = id
@@ -23,10 +23,8 @@ Public Class frmListaLocalizacion
                 item.ImageIndex = 1
             End If
 
-            ListView1.Items.Add(item)
+            listaLocalizaciones.Items.Add(item)
 
-            'Dim item As ListViewItem = ListBox1.Items.Item(id)
-            'item.Tag = recordset.Fields("id")
             recordset.MoveNext()
         Loop
     End Sub
@@ -35,26 +33,48 @@ Public Class frmListaLocalizacion
         carga()
     End Sub
 
-    Private Sub btnNuevo_Click(sender As System.Object, e As System.EventArgs) Handles btnNuevo.Click
+    Private Sub btnNuevo_Click(sender As System.Object, e As System.EventArgs) Handles ToolStripButton1.Click
         frmAddLocalizacion.MdiParent = frmPrincipal
         frmAddLocalizacion.Show()
     End Sub
 
-    Private Sub btnBorrar_Click(sender As System.Object, e As System.EventArgs) Handles btnBorrar.Click
+    Private Sub btnBorrar_Click(sender As System.Object, e As System.EventArgs) Handles mnBorrar.Click, ToolStripButton3.Click
         Dim query As String
-        query = "DELETE FROM `localizacion` WHERE id = " & ListView1.SelectedItems(0).Tag & ";"
-        Dim confirmacion As Integer = MsgBox("¿Realmente quiere eliminar el elemento seleccionado?", MsgBoxStyle.OkCancel)
-        If confirmacion = vbOK Then
-            frmPrincipal.conexion.exec(query)
-            carga()
+        If listaLocalizaciones.SelectedItems.Count > 0 Then
+            query = "DELETE FROM `localizacion` WHERE id = " & listaLocalizaciones.SelectedItems(0).Tag & ";"
+            Dim confirmacion As Integer = MsgBox("¿Realmente quiere eliminar el elemento seleccionado?", MsgBoxStyle.OkCancel)
+            If confirmacion = vbOK Then
+                frmPrincipal.conexion.exec(query)
+                carga()
+            End If
         End If
     End Sub
 
-    Private Sub btnVer_Click(sender As System.Object, e As System.EventArgs) Handles btnVer.Click
-
+    Private Sub btnEditar_Click(sender As System.Object, e As System.EventArgs) Handles mnEditar.Click, ToolStripButton2.Click
+        If listaLocalizaciones.SelectedItems.Count > 0 Then
+            frmEditarLocalizacion.id = listaLocalizaciones.SelectedItems(0).Tag
+            frmEditarLocalizacion.MdiParent = frmPrincipal
+            frmEditarLocalizacion.Show()
+        End If
     End Sub
 
-    Private Sub btnEditar_Click(sender As System.Object, e As System.EventArgs) Handles btnEditar.Click
+    Private Sub ListView1_MouseDoubleClick(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles listaLocalizaciones.MouseDoubleClick
+        If listaLocalizaciones.SelectedItems.Count > 0 Then
+            frmEditarLocalizacion.id = listaLocalizaciones.SelectedItems(0).Tag
+            frmEditarLocalizacion.MdiParent = frmPrincipal
+            frmEditarLocalizacion.Show()
+        End If
+    End Sub
 
+    Private Sub ctMenu_Opening(sender As System.Object, e As System.ComponentModel.CancelEventArgs) Handles ctMenu.Opening
+        If listaLocalizaciones.SelectedItems.Count > 0 Then
+            For i = 0 To ctMenu.Items.Count - 1
+                ctMenu.Items(i).Enabled = True
+            Next
+        Else
+            For i = 0 To ctMenu.Items.Count - 1
+                ctMenu.Items(i).Enabled = False
+            Next
+        End If
     End Sub
 End Class

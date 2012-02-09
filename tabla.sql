@@ -1,4 +1,4 @@
-CREATE TABLE  `aurora`.`tecnico` (
+CREATE TABLE IF NOT EXISTS  `tecnico` (
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 `usuario` VARCHAR( 45 ) NOT NULL ,
 `password` VARCHAR( 45 ) NOT NULL ,
@@ -8,7 +8,7 @@ UNIQUE (
 `usuario`
 ));
 
-CREATE TABLE  `aurora`.`localizacion` (
+CREATE TABLE IF NOT EXISTS  `localizacion` (
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 `empresa` VARCHAR( 45 ) NOT NULL ,
 `contacto` VARCHAR( 45 ) NOT NULL ,
@@ -18,14 +18,14 @@ CREATE TABLE  `aurora`.`localizacion` (
 `notas` TEXT NOT NULL ,
 `correo` VARCHAR( 100 ) NOT NULL);
 
-CREATE TABLE  `aurora`.`equipo` (
+CREATE TABLE IF NOT EXISTS  `equipo` (
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 `nombre` VARCHAR( 45 ) NOT NULL ,
 `usuario` VARCHAR( 45 ) NOT NULL ,
 `password` VARCHAR( 45 ) NOT NULL ,
 `localizacion` INT NOT NULL);
 
-CREATE TABLE  `aurora`.`hardware` (
+CREATE TABLE IF NOT EXISTS  `hardware` (
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 `nombre` VARCHAR( 45 ) NOT NULL ,
 `fecha_instalacion` DATE NOT NULL ,
