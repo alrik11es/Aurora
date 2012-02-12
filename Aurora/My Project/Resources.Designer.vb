@@ -74,6 +74,13 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property bug() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("bug", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property computer() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("computer", resourceCulture)
@@ -105,6 +112,13 @@ Namespace My.Resources
         Friend ReadOnly Property help() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("help", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property magnifier() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("magnifier", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -154,6 +168,97 @@ Namespace My.Resources
         Friend ReadOnly Property server_add() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("server_add", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property server_chart() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("server_chart", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property server_compressed() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("server_compressed", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property server_connect() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("server_connect", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property server_database() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("server_database", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property server_delete() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("server_delete", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property server_edit() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("server_edit", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property server_error() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("server_error", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property server_go() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("server_go", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property server_key() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("server_key", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property server_lightning() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("server_lightning", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property server_link() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("server_link", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property server_uncompressed() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("server_uncompressed", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property server1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("server1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

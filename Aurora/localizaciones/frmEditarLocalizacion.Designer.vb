@@ -22,6 +22,7 @@ Partial Class frmEditarLocalizacion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEditarLocalizacion))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtNotas = New System.Windows.Forms.TextBox()
@@ -39,11 +40,17 @@ Partial Class frmEditarLocalizacion
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.btnEditarLocalizacion = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.listadoEquipos = New System.Windows.Forms.ListView()
+        Me.ctMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.VerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BorrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.imgList = New System.Windows.Forms.ImageList(Me.components)
         Me.btnAddEquipo = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.ctMenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -184,7 +191,7 @@ Partial Class frmEditarLocalizacion
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.ListView1)
+        Me.GroupBox3.Controls.Add(Me.listadoEquipos)
         Me.GroupBox3.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(325, 285)
@@ -192,13 +199,55 @@ Partial Class frmEditarLocalizacion
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Equipos en localización"
         '
-        'ListView1
+        'listadoEquipos
         '
-        Me.ListView1.Location = New System.Drawing.Point(6, 19)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(313, 260)
-        Me.ListView1.TabIndex = 0
-        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.listadoEquipos.ContextMenuStrip = Me.ctMenu
+        Me.listadoEquipos.HideSelection = False
+        Me.listadoEquipos.Location = New System.Drawing.Point(6, 19)
+        Me.listadoEquipos.Name = "listadoEquipos"
+        Me.listadoEquipos.Size = New System.Drawing.Size(313, 260)
+        Me.listadoEquipos.SmallImageList = Me.imgList
+        Me.listadoEquipos.TabIndex = 0
+        Me.listadoEquipos.UseCompatibleStateImageBehavior = False
+        Me.listadoEquipos.View = System.Windows.Forms.View.List
+        '
+        'ctMenu
+        '
+        Me.ctMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VerToolStripMenuItem, Me.EditarToolStripMenuItem, Me.BorrarToolStripMenuItem})
+        Me.ctMenu.Name = "ContextMenuStrip1"
+        Me.ctMenu.Size = New System.Drawing.Size(107, 70)
+        '
+        'VerToolStripMenuItem
+        '
+        Me.VerToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.server
+        Me.VerToolStripMenuItem.Name = "VerToolStripMenuItem"
+        Me.VerToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.VerToolStripMenuItem.Text = "Ver"
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.server_edit
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'BorrarToolStripMenuItem
+        '
+        Me.BorrarToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.server_delete
+        Me.BorrarToolStripMenuItem.Name = "BorrarToolStripMenuItem"
+        Me.BorrarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BorrarToolStripMenuItem.Text = "Borrar"
+        '
+        'imgList
+        '
+        Me.imgList.ImageStream = CType(resources.GetObject("imgList.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.imgList.TransparentColor = System.Drawing.Color.Transparent
+        Me.imgList.Images.SetKeyName(0, "server.png")
+        Me.imgList.Images.SetKeyName(1, "computer.png")
+        Me.imgList.Images.SetKeyName(2, "printer.png")
+        Me.imgList.Images.SetKeyName(3, "router.png")
+        Me.imgList.Images.SetKeyName(4, "switch_icon.png")
+        Me.imgList.Images.SetKeyName(5, "image.png")
         '
         'btnAddEquipo
         '
@@ -230,6 +279,7 @@ Partial Class frmEditarLocalizacion
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
+        Me.ctMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -249,6 +299,11 @@ Partial Class frmEditarLocalizacion
     Friend WithEvents txtNombre As System.Windows.Forms.TextBox
     Friend WithEvents btnEditarLocalizacion As System.Windows.Forms.Button
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
-    Friend WithEvents ListView1 As System.Windows.Forms.ListView
+    Friend WithEvents listadoEquipos As System.Windows.Forms.ListView
     Friend WithEvents btnAddEquipo As System.Windows.Forms.Button
+    Friend WithEvents imgList As System.Windows.Forms.ImageList
+    Friend WithEvents ctMenu As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents EditarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BorrarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents VerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

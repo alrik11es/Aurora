@@ -3,30 +3,7 @@
 Public Class frmListaLocalizacion
 
     Public Sub carga()
-        Dim recordset As ADODB.Recordset = frmPrincipal.conexion.exec("SELECT * FROM localizacion")
-
-        Dim tabla As DataTable = New DataTable("Prueba")
-        Dim adaptador As OleDb.OleDbDataAdapter = New OleDb.OleDbDataAdapter()
-
-        listaLocalizaciones.Clear()
-        Dim id As Integer
-        Do Until recordset.EOF
-
-            id = recordset.Fields("id").Value
-            Dim item As ListViewItem = New ListViewItem()
-            item.Tag = id
-            item.Text = recordset.Fields("empresa").Value
-
-            If id Mod 2 = 0 Then
-                item.ImageIndex = 0
-            Else
-                item.ImageIndex = 1
-            End If
-
-            listaLocalizaciones.Items.Add(item)
-
-            recordset.MoveNext()
-        Loop
+        cargaListado("SELECT * FROM localizacion", "empresa", listaLocalizaciones)
     End Sub
 
     Private Sub frmListaLocalizacion_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
@@ -76,5 +53,11 @@ Public Class frmListaLocalizacion
                 ctMenu.Items(i).Enabled = False
             Next
         End If
+    End Sub
+
+    Private Sub mnAddEquipo_Click(sender As System.Object, e As System.EventArgs) Handles mnAddEquipo.Click
+        frmAddEquipo.localizacion = listaLocalizaciones.SelectedItems(0).Tag
+        frmAddEquipo.MdiParent = frmPrincipal
+        frmAddEquipo.Show()
     End Sub
 End Class

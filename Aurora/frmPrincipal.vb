@@ -40,4 +40,13 @@
         frmListaLocalizacion.MdiParent = Me
         frmListaLocalizacion.Show()
     End Sub
+
+    Private Sub AñadirEquipoToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs)
+        frmAddEquipo.MdiParent = Me
+        frmAddEquipo.Show()
+    End Sub
+
+    Private Sub EquipoToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles EquipoToolStripMenuItem.Click
+
+    End Sub
 End Class
