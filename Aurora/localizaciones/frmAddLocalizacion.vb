@@ -16,7 +16,7 @@ Public Class frmAddLocalizacion
         '        "'" & txtNotas.Text & "','" & txtCorreo.Text &
         '        "'" & txtTelefono.Text & "')"
 
-        Dim recordset As ADODB.Recordset = frmPrincipal.conexion.exec(query)
+        Dim recordset As ADODB.Recordset = frmPrincipal.conexion.exec(query) 'revisar bien
 
         If frmListaLocalizacion.Visible = True Then
             frmListaLocalizacion.carga()

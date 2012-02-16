@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmBorrarUsuariovb
+Partial Class frmEditarUsuario
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -33,41 +33,43 @@ Partial Class frmBorrarUsuariovb
         Me.MiControlUsuario1.Location = New System.Drawing.Point(0, 0)
         Me.MiControlUsuario1.Name = "MiControlUsuario1"
         Me.MiControlUsuario1.Password = ""
-        Me.MiControlUsuario1.Size = New System.Drawing.Size(422, 338)
+        Me.MiControlUsuario1.Size = New System.Drawing.Size(460, 338)
         Me.MiControlUsuario1.TabIndex = 0
         Me.MiControlUsuario1.Telefono = ""
         Me.MiControlUsuario1.usuario = ""
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLimpiar.Location = New System.Drawing.Point(50, 315)
+        Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLimpiar.Location = New System.Drawing.Point(60, 344)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(75, 23)
         Me.btnLimpiar.TabIndex = 14
-        Me.btnLimpiar.Text = "Borrar Usuario"
+        Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
         'btnGuardar
         '
-        Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGuardar.Location = New System.Drawing.Point(298, 315)
+        Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardar.Location = New System.Drawing.Point(308, 344)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(105, 23)
         Me.btnGuardar.TabIndex = 13
-        Me.btnGuardar.Text = "Borrar Usuario"
+        Me.btnGuardar.Text = "Editar Usuario"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
-        'frmBorrarUsuariovb
+        'frmEditarUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(445, 364)
+        Me.ClientSize = New System.Drawing.Size(485, 399)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.MiControlUsuario1)
-        Me.Name = "frmBorrarUsuariovb"
-        Me.Text = "Borrar Usuariovb"
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Name = "frmEditarUsuario"
+        Me.Text = "Editar Usuario"
         Me.ResumeLayout(False)
 
     End Sub
