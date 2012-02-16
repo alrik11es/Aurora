@@ -1,18 +1,23 @@
-﻿Public Class frmEditarEquipo
+﻿Imports MySql.Data.MySqlClient
+
+Public Class frmEditarEquipo
     Public localizacion As Integer
     Public id As Integer
 
     Private Sub frmEditarEquipo_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
 
-        Dim recordset As ADODB.Recordset = frmPrincipal.conexion.exec("SELECT * FROM equipo WHERE id = " & id & ";")
-        txtNombre.Text = recordset.Fields("nombre").Value
-        txtNotas.Text = recordset.Fields("notas").Value
-        slTipo.SelectedIndex = recordset.Fields("tipo").Value
-        cbSOperativo.SelectedIndex = recordset.Fields("so").Value
-        dtFecha.Text = recordset.Fields("fecha_instalacion").Value
+        Dim recordset As MySqlDataReader = frmPrincipal.conexion.exec("SELECT * FROM equipo WHERE id = " & id & ";")
+        txtNombre.Text = recordset.GetString("nombre")
+        txtNotas.Text = recordset.GetString("notas")
+        slTipo.SelectedIndex = recordset.GetString("tipo")
+        cbSOperativo.SelectedIndex = recordset.GetString("so")
+        dtFecha.Text = recordset.GetString("fecha_instalacion")
+        recordset.Close()
 
         recordset = frmPrincipal.conexion.exec("SELECT * FROM localizacion WHERE id = " & localizacion)
-        LinkLabel1.Text = recordset.Fields("empresa").Value
+        LinkLabel1.Text = recordset.GetString("empresa")
+        recordset.Close()
+
     End Sub
 
     Private Sub btnAdd_Click(sender As System.Object, e As System.EventArgs) Handles btnAdd.Click
@@ -22,7 +27,8 @@
                 "', `tipo` = '" & escape(slTipo.SelectedIndex) & "', `fecha_instalacion` = '" & escape(dtFecha.Text) &
                 "', `localizacion` = '" & escape(localizacion) & "', `so` = '" & escape(cbSOperativo.SelectedIndex) & "' WHERE id = " & id & ";"
 
-        Dim recordset As ADODB.Recordset = frmPrincipal.conexion.exec(query)
+        Dim recordset As MySqlDataReader = frmPrincipal.conexion.exec(query)
+        recordset.Close()
 
         If frmEditarLocalizacion.Visible = True Then
             frmEditarLocalizacion.carga()

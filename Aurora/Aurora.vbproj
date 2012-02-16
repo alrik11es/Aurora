@@ -52,6 +52,7 @@
     <ApplicationIcon>aurora.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -183,7 +184,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="api\MySQLConexion.vb" />
-    <Compile Include="api\MySQL.vb" />
+    <Compile Include="api\MySQLfunciones.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="equipos\frmEditarEquipo.resx">

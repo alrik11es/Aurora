@@ -21,8 +21,10 @@ CREATE TABLE IF NOT EXISTS  `localizacion` (
 CREATE TABLE IF NOT EXISTS  `equipo` (
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 `nombre` VARCHAR( 45 ) NOT NULL ,
-`usuario` VARCHAR( 45 ) NOT NULL ,
-`password` VARCHAR( 45 ) NOT NULL ,
+`fecha_instalacion` DATETIME NOT NULL ,
+`tipo` INTEGER NOT NULL ,
+`so` INTEGER NOT NULL ,
+`notas` TEXT NOT NULL ,
 `localizacion` INT NOT NULL);
 
 CREATE TABLE IF NOT EXISTS  `hardware` (

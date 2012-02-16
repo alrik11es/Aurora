@@ -1,10 +1,13 @@
-﻿Public Class MySQLConexion
+﻿Imports MySql.Data.MySqlClient
+
+Public Class MySQLConexion
     Public host As String
     Public database As String
     Public user As String
     Public password As String
     Public port As String
-    Public conn As ADODB.Connection
+    Public conn As MySqlConnection
+    Public dreader As MySqlDataReader
 
     Public connection
 
@@ -44,8 +47,7 @@
     Function exist()
         Try
             Me.connect()
-            Dim recordset As New ADODB.Recordset
-            recordset = Me.exec("SHOW DATABASES;")
+            Dim reader As MySqlDataReader = Me.exec("SHOW DATABASES;")
             Me.close()
             Return True
         Catch ex As Exception
@@ -56,13 +58,23 @@
 
 
     Sub connect()
-        Me.conn = New ADODB.Connection
+        Me.conn = New MySqlConnection()
         'Me.conn.ConnectionString = Me.ConnectString()
-        Me.conn.Open(Me.ConnectString())
+        Me.conn.ConnectionString = Me.ConnectString()
+        Me.conn.Open()
     End Sub
 
     Function exec(query As String)
-        Return Me.conn.Execute(query)
+        Try
+            Dim command As MySqlCommand = New MySqlCommand(query, Me.conn)
+            Me.dreader = command.ExecuteReader
+            Me.dreader.Read()
+            Return Me.dreader
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        End Try
+        
     End Function
 
     Sub close()
@@ -73,12 +85,16 @@
 
     Private Function ConnectString() As String
 
-        ConnectString = "Driver={MySQL ODBC 5.1 Driver};" & _
-                        "Server=" & Me.host & _
+        '   con.ConnectionString = "server=" & Servidor & ";" _
+        '& "user id=" & Usuario & ";" _
+        '& "password=" & Pass & ";" _
+        '& "database=" & BasedeDatos & ""
+
+        ConnectString = "Server=" & Me.host & _
                         ";Port=" & Me.port & _
-                        ";Database=" & Me.database & ";" & _
-                        "User=" & Me.user & _
-                        ";Password=" & Me.password & ";Option=3"
+                        ";database=" & Me.database & ";" & _
+                        "user id=" & Me.user & _
+                        ";password=" & Me.password
     End Function
 
 End Class

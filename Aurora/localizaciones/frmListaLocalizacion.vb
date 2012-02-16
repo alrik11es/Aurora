@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports MySql.Data.MySqlClient
 
 Public Class frmListaLocalizacion
 
@@ -21,7 +22,8 @@ Public Class frmListaLocalizacion
             query = "DELETE FROM `localizacion` WHERE id = " & listaLocalizaciones.SelectedItems(0).Tag & ";"
             Dim confirmacion As Integer = MsgBox("¿Realmente quiere eliminar el elemento seleccionado?", MsgBoxStyle.OkCancel)
             If confirmacion = vbOK Then
-                frmPrincipal.conexion.exec(query)
+                Dim recordset As MySqlDataReader = frmPrincipal.conexion.exec(query)
+                recordset.Close()
                 carga()
             End If
         End If

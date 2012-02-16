@@ -1,4 +1,5 @@
-﻿Imports Aurora.MySQL
+﻿Imports Aurora.MySQLfunciones
+Imports MySql.Data.MySqlClient
 
 Public Class frmEditarLocalizacion
     Public id As Integer
@@ -8,13 +9,14 @@ Public Class frmEditarLocalizacion
     End Sub
 
     Private Sub frmEditarLocalizacion_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        Dim recordset As ADODB.Recordset = frmPrincipal.conexion.exec("SELECT * FROM localizacion WHERE id = " & id & ";")
-        txtEmpresa.Text = recordset.Fields("empresa").Value
-        txtCorreo.Text = recordset.Fields("correo").Value
-        txtDireccion.Text = recordset.Fields("direccion").Value
-        txtNombre.Text = recordset.Fields("empresa").Value
-        txtNotas.Text = recordset.Fields("notas").Value
-        txtTelefono.Text = recordset.Fields("telefono").Value
+        Dim recordset As MySqlDataReader = frmPrincipal.conexion.exec("SELECT * FROM localizacion WHERE id = " & id & ";")
+        txtEmpresa.Text = recordset.GetString("empresa")
+        txtCorreo.Text = recordset.GetString("correo")
+        txtDireccion.Text = recordset.GetString("direccion")
+        txtNombre.Text = recordset.GetString("empresa")
+        txtNotas.Text = recordset.GetString("notas")
+        txtTelefono.Text = recordset.GetString("telefono")
+        recordset.Close()
         carga()
     End Sub
 
@@ -29,7 +31,8 @@ Public Class frmEditarLocalizacion
                 " direccion = '" & escape(txtDireccion.Text) & "', telefono = '" & escape(txtTelefono.Text) & "', notas = '" & escape(txtNotas.Text) & "'," &
                 " correo = '" & escape(txtCorreo.Text) & "' WHERE id = " & id & ";"
 
-        Dim recordset As ADODB.Recordset = frmPrincipal.conexion.exec(query)
+        Dim recordset As MySqlDataReader = frmPrincipal.conexion.exec(query)
+        recordset.Close()
 
         If frmListaLocalizacion.Visible = True Then
             frmListaLocalizacion.carga()
@@ -91,7 +94,8 @@ Public Class frmEditarLocalizacion
                 For Each item As ListViewItem In listadoEquipos.SelectedItems
                     query = "DELETE FROM `equipo` WHERE id = " & item.Tag & ";"
 
-                    frmPrincipal.conexion.exec(query)
+                    Dim recordset As MySqlDataReader = frmPrincipal.conexion.exec(query)
+                    recordset.Close()
                 Next
                 carga()
             End If
