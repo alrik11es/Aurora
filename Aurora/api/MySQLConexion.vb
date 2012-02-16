@@ -70,6 +70,7 @@ Public Class MySQLConexion
             Me.dreader.Read()
             Return Me.dreader
         Catch ex As Exception
+            MsgBox(ex.Message)
             Return False
         End Try
         

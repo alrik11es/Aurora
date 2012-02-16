@@ -4,12 +4,9 @@ Public Class frmAddEquipo
     Public localizacion As Integer
 
     Private Sub frmAddEquipo_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-
         Dim recordset As MySqlDataReader = frmPrincipal.conexion.exec("SELECT * FROM localizacion WHERE id = " & localizacion)
-        MsgBox("SELECT * FROM localizacion WHERE id = " & localizacion)
         LinkLabel1.Text = recordset.GetString("empresa")
         recordset.Close()
-
     End Sub
 
     Private Sub btnAdd_Click(sender As System.Object, e As System.EventArgs) Handles btnAdd.Click
