@@ -52,6 +52,7 @@
     <ApplicationIcon>aurora.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.3.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -100,22 +101,22 @@
     <Compile Include="equipos\frmVerEquipo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBorrarUsuariovb.Designer.vb">
+    <Compile Include="usuarios\frmBorrarUsuariovb.Designer.vb">
       <DependentUpon>frmBorrarUsuariovb.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmBorrarUsuariovb.vb">
+    <Compile Include="usuarios\frmBorrarUsuariovb.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCrearUsuario.Designer.vb">
+    <Compile Include="usuarios\frmCrearUsuario.Designer.vb">
       <DependentUpon>frmCrearUsuario.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmCrearUsuario.vb">
+    <Compile Include="usuarios\frmCrearUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditarUsuario.Designer.vb">
+    <Compile Include="usuarios\frmEditarUsuario.Designer.vb">
       <DependentUpon>frmEditarUsuario.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmEditarUsuario.vb">
+    <Compile Include="usuarios\frmEditarUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="localizaciones\frmEditarLocalizacion.Designer.vb">
@@ -161,10 +162,10 @@
     <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MiControlUsuario.Designer.vb">
+    <Compile Include="usuarios\MiControlUsuario.Designer.vb">
       <DependentUpon>MiControlUsuario.vb</DependentUpon>
     </Compile>
-    <Compile Include="MiControlUsuario.vb">
+    <Compile Include="usuarios\MiControlUsuario.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -183,7 +184,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="api\MySQLConexion.vb" />
-    <Compile Include="api\MySQL.vb" />
+    <Compile Include="api\MySQLfunciones.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="equipos\frmEditarEquipo.resx">
@@ -195,13 +196,13 @@
     <EmbeddedResource Include="equipos\frmVerEquipo.resx">
       <DependentUpon>frmVerEquipo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBorrarUsuariovb.resx">
+    <EmbeddedResource Include="usuarios\frmBorrarUsuariovb.resx">
       <DependentUpon>frmBorrarUsuariovb.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCrearUsuario.resx">
+    <EmbeddedResource Include="usuarios\frmCrearUsuario.resx">
       <DependentUpon>frmCrearUsuario.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditarUsuario.resx">
+    <EmbeddedResource Include="usuarios\frmEditarUsuario.resx">
       <DependentUpon>frmEditarUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="localizaciones\frmEditarLocalizacion.resx">
@@ -225,7 +226,7 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MiControlUsuario.resx">
+    <EmbeddedResource Include="usuarios\MiControlUsuario.resx">
       <DependentUpon>MiControlUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">

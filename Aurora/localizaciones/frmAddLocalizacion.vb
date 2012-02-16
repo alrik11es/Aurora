@@ -1,4 +1,5 @@
-﻿Imports Aurora.MySQL
+﻿Imports Aurora.MySQLfunciones
+Imports MySql.Data.MySqlClient
 
 Public Class frmAddLocalizacion
 
@@ -16,7 +17,8 @@ Public Class frmAddLocalizacion
         '        "'" & txtNotas.Text & "','" & txtCorreo.Text &
         '        "'" & txtTelefono.Text & "')"
 
-        Dim recordset As ADODB.Recordset = frmPrincipal.conexion.exec(query)
+        Dim recordset As MySqlDataReader = frmPrincipal.conexion.exec(query)
+        recordset.Close()
 
         If frmListaLocalizacion.Visible = True Then
             frmListaLocalizacion.carga()

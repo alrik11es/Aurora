@@ -1,9 +1,15 @@
-﻿Public Class frmAddEquipo
+﻿Imports MySql.Data.MySqlClient
+
+Public Class frmAddEquipo
     Public localizacion As Integer
 
     Private Sub frmAddEquipo_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        Dim recordset As ADODB.Recordset = frmPrincipal.conexion.exec("SELECT * FROM localizacion WHERE id = " & localizacion)
-        LinkLabel1.Text = recordset.Fields("empresa").Value
+
+        Dim recordset As MySqlDataReader = frmPrincipal.conexion.exec("SELECT * FROM localizacion WHERE id = " & localizacion)
+        MsgBox("SELECT * FROM localizacion WHERE id = " & localizacion)
+        LinkLabel1.Text = recordset.GetString("empresa")
+        recordset.Close()
+
     End Sub
 
     Private Sub btnAdd_Click(sender As System.Object, e As System.EventArgs) Handles btnAdd.Click
@@ -13,7 +19,8 @@
                 "VALUES (NULL, '" & escape(txtNombre.Text) & "', '" & escape(txtNotas.Text) &
                 "', '" & escape(slTipo.SelectedIndex) & "', '" & escape(dtFecha.Text) & "', '" & escape(localizacion) & "', '" & escape(cbSOperativo.SelectedIndex) & "');"
 
-        Dim recordset As ADODB.Recordset = frmPrincipal.conexion.exec(query)
+        Dim recordset As MySqlDataReader = frmPrincipal.conexion.exec(query)
+        recordset.Close()
 
         If frmEditarLocalizacion.Visible = True Then
             frmEditarLocalizacion.carga()

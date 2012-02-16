@@ -1,4 +1,6 @@
-﻿Public Class frmVerEquipo
+﻿Imports MySql.Data.MySqlClient
+
+Public Class frmVerEquipo
     Public localizacion As Integer
     Public id As Integer
 
@@ -7,15 +9,18 @@
     End Sub
 
     Private Sub frmVerEquipo_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        Dim recordset As ADODB.Recordset = frmPrincipal.conexion.exec("SELECT * FROM equipo WHERE id = " & id & ";")
-        Me.Text = "Equipo: " & recordset.Fields("nombre").Value
-        lblNombre.Text = "Nombre de equipo: " & recordset.Fields("nombre").Value
-        txtNotas.Text = recordset.Fields("notas").Value
-        lblTipo.Text = "Tipo de equipo: " & frmEditarEquipo.slTipo.Items(recordset.Fields("tipo").Value).ToString
-        lblSO.Text = "Sistema operativo: " & recordset.Fields("so").Value
-        lblFecha.Text = "Fecha de instalación: " & recordset.Fields("fecha_instalacion").Value
+        Dim recordset As MySqlDataReader = frmPrincipal.conexion.exec("SELECT * FROM equipo WHERE id = " & id & ";")
+        Me.Text = "Equipo: " & recordset.GetString("nombre")
+        lblNombre.Text = "Nombre de equipo: " & recordset.GetString("nombre")
+        txtNotas.Text = recordset.GetString("notas")
+        lblTipo.Text = "Tipo de equipo: " & frmEditarEquipo.slTipo.Items(recordset.GetString("tipo")).ToString
+        lblSO.Text = "Sistema operativo: " & recordset.GetString("so")
+        lblFecha.Text = "Fecha de instalación: " & recordset.GetString("fecha_instalacion")
+        recordset.Close()
 
         recordset = frmPrincipal.conexion.exec("SELECT * FROM localizacion WHERE id = " & localizacion)
-        LinkLabel1.Text = recordset.Fields("empresa").Value
+        LinkLabel1.Text = recordset.GetString("empresa")
+        recordset.Close()
+
     End Sub
 End Class
