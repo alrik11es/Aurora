@@ -1,6 +1,6 @@
-﻿Public Class frmBorrarUsuariovb
+Public Class frmBorrarUsuariovb
 
-    Private Sub btnGuardar_Click(sender As System.Object, e As System.EventArgs) Handles btnGuardar.Click
+    Private Sub btnLimpiar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLimpiar.Click
 
     End Sub
 End Class
