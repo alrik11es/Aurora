@@ -109,6 +109,34 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property drive_add() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("drive_add", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property drive_delete() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("drive_delete", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property drive_edit() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("drive_edit", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property drive_magnify() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("drive_magnify", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property help() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("help", resourceCulture)

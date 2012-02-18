@@ -101,6 +101,12 @@
     <Compile Include="equipos\frmVerEquipo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="hardware\frmAddHardware.Designer.vb">
+      <DependentUpon>frmAddHardware.vb</DependentUpon>
+    </Compile>
+    <Compile Include="hardware\frmAddHardware.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="usuarios\frmBorrarUsuariovb.Designer.vb">
       <DependentUpon>frmBorrarUsuariovb.vb</DependentUpon>
     </Compile>
@@ -193,8 +199,14 @@
     <EmbeddedResource Include="equipos\frmAddEquipo.resx">
       <DependentUpon>frmAddEquipo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="equipos\frmListarEquipos.resx">
+      <DependentUpon>frmListarEquipos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="equipos\frmVerEquipo.resx">
       <DependentUpon>frmVerEquipo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hardware\frmAddHardware.resx">
+      <DependentUpon>frmAddHardware.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="usuarios\frmBorrarUsuariovb.resx">
       <DependentUpon>frmBorrarUsuariovb.vb</DependentUpon>
@@ -263,6 +275,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="aurora.ico" />
+    <None Include="Resources\drive_delete.png" />
+    <None Include="Resources\drive_edit.png" />
+    <None Include="Resources\drive_magnify.png" />
+    <None Include="Resources\drive_add.png" />
     <None Include="Resources\server_uncompressed.png" />
     <None Include="Resources\server_link.png" />
     <None Include="Resources\server_lightning.png" />
@@ -312,6 +328,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

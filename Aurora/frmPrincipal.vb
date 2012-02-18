@@ -47,6 +47,7 @@
     End Sub
 
     Private Sub EquipoToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles EquipoToolStripMenuItem.Click
-
+        frmListarEquipos.MdiParent = Me
+        frmListarEquipos.Show()
     End Sub
 End Class

@@ -31,5 +31,6 @@ CREATE TABLE IF NOT EXISTS  `hardware` (
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 `nombre` VARCHAR( 45 ) NOT NULL ,
 `fecha_instalacion` DATE NOT NULL ,
+`tipo` INTEGER NOT NULL ,
 `notas` TEXT NOT NULL ,
 `equipo` INT NOT NULL);

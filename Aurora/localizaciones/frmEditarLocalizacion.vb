@@ -5,7 +5,7 @@ Public Class frmEditarLocalizacion
     Public id As Integer
 
     Public Sub carga()
-        cargaListadoEquipos("SELECT * FROM equipo WHERE localizacion = " & id, "nombre", listadoEquipos)
+        cargaListadoConTipo("SELECT * FROM equipo WHERE localizacion = " & id, "nombre", listadoEquipos)
     End Sub
 
     Private Sub frmEditarLocalizacion_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
@@ -13,7 +13,7 @@ Public Class frmEditarLocalizacion
         txtEmpresa.Text = recordset.GetString("empresa")
         txtCorreo.Text = recordset.GetString("correo")
         txtDireccion.Text = recordset.GetString("direccion")
-        txtNombre.Text = recordset.GetString("empresa")
+        txtNombre.Text = recordset.GetString("contacto")
         txtNotas.Text = recordset.GetString("notas")
         txtTelefono.Text = recordset.GetString("telefono")
         recordset.Close()

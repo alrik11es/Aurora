@@ -32,7 +32,7 @@ Module loaders
         recordset.Close()
     End Sub
 
-    Public Sub cargaListadoEquipos(query As String, campo_a_mostrar As String, listado As ListView)
+    Public Sub cargaListadoConTipo(query As String, campo_a_mostrar As String, listado As ListView)
         Dim recordset As MySqlDataReader = frmPrincipal.conexion.exec(query)
         Dim id As Integer
         listado.Clear()

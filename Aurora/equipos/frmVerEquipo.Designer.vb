@@ -27,9 +27,9 @@ Partial Class frmVerEquipo
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tabEquipo = New System.Windows.Forms.TabPage()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblSO = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnEditar = New System.Windows.Forms.Button()
         Me.txtNotas = New System.Windows.Forms.TextBox()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -38,7 +38,7 @@ Partial Class frmVerEquipo
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblNombre = New System.Windows.Forms.Label()
         Me.tabHardware = New System.Windows.Forms.TabPage()
-        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.listadoHardware = New System.Windows.Forms.ListView()
         Me.tabConfig = New System.Windows.Forms.TabPage()
         Me.tabSoft = New System.Windows.Forms.TabPage()
         Me.tabIncidencias = New System.Windows.Forms.TabPage()
@@ -46,12 +46,18 @@ Partial Class frmVerEquipo
         Me.imgListConfig = New System.Windows.Forms.ImageList(Me.components)
         Me.imgListSoft = New System.Windows.Forms.ImageList(Me.components)
         Me.imgListIncidencias = New System.Windows.Forms.ImageList(Me.components)
-        Me.lblSO = New System.Windows.Forms.Label()
+        Me.mnHardware = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BorrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.AñadirHardwareToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VerHardwareToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabControl1.SuspendLayout()
         Me.tabEquipo.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabHardware.SuspendLayout()
+        Me.mnHardware.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -84,7 +90,7 @@ Partial Class frmVerEquipo
         Me.GroupBox1.Controls.Add(Me.lblSO)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.PictureBox1)
-        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.btnEditar)
         Me.GroupBox1.Controls.Add(Me.txtNotas)
         Me.GroupBox1.Controls.Add(Me.LinkLabel1)
         Me.GroupBox1.Controls.Add(Me.Label5)
@@ -99,6 +105,15 @@ Partial Class frmVerEquipo
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos del equipo"
         '
+        'lblSO
+        '
+        Me.lblSO.AutoSize = True
+        Me.lblSO.Location = New System.Drawing.Point(6, 89)
+        Me.lblSO.Name = "lblSO"
+        Me.lblSO.Size = New System.Drawing.Size(81, 13)
+        Me.lblSO.TabIndex = 13
+        Me.lblSO.Text = "Tipo de equipo:"
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -108,23 +123,14 @@ Partial Class frmVerEquipo
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "Grafica de incidencias:"
         '
-        'PictureBox1
+        'btnEditar
         '
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Location = New System.Drawing.Point(9, 266)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(486, 100)
-        Me.PictureBox1.TabIndex = 3
-        Me.PictureBox1.TabStop = False
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(420, 15)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "Editar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnEditar.Location = New System.Drawing.Point(420, 15)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEditar.TabIndex = 11
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
         '
         'txtNotas
         '
@@ -193,7 +199,7 @@ Partial Class frmVerEquipo
         '
         'tabHardware
         '
-        Me.tabHardware.Controls.Add(Me.ListView1)
+        Me.tabHardware.Controls.Add(Me.listadoHardware)
         Me.tabHardware.Location = New System.Drawing.Point(4, 22)
         Me.tabHardware.Name = "tabHardware"
         Me.tabHardware.Size = New System.Drawing.Size(515, 401)
@@ -201,14 +207,15 @@ Partial Class frmVerEquipo
         Me.tabHardware.Text = "Hardware"
         Me.tabHardware.UseVisualStyleBackColor = True
         '
-        'ListView1
+        'listadoHardware
         '
-        Me.ListView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ListView1.Location = New System.Drawing.Point(0, 0)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(515, 401)
-        Me.ListView1.TabIndex = 0
-        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.listadoHardware.ContextMenuStrip = Me.mnHardware
+        Me.listadoHardware.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.listadoHardware.Location = New System.Drawing.Point(0, 0)
+        Me.listadoHardware.Name = "listadoHardware"
+        Me.listadoHardware.Size = New System.Drawing.Size(515, 401)
+        Me.listadoHardware.TabIndex = 0
+        Me.listadoHardware.UseCompatibleStateImageBehavior = False
         '
         'tabConfig
         '
@@ -282,14 +289,48 @@ Partial Class frmVerEquipo
         Me.imgListIncidencias.Images.SetKeyName(4, "switch_icon.png")
         Me.imgListIncidencias.Images.SetKeyName(5, "image.png")
         '
-        'lblSO
+        'mnHardware
         '
-        Me.lblSO.AutoSize = True
-        Me.lblSO.Location = New System.Drawing.Point(6, 89)
-        Me.lblSO.Name = "lblSO"
-        Me.lblSO.Size = New System.Drawing.Size(81, 13)
-        Me.lblSO.TabIndex = 13
-        Me.lblSO.Text = "Tipo de equipo:"
+        Me.mnHardware.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirHardwareToolStripMenuItem, Me.VerHardwareToolStripMenuItem, Me.EditarToolStripMenuItem, Me.BorrarToolStripMenuItem})
+        Me.mnHardware.Name = "ContextMenuStrip1"
+        Me.mnHardware.Size = New System.Drawing.Size(117, 92)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.drive_edit
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'BorrarToolStripMenuItem
+        '
+        Me.BorrarToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.drive_delete
+        Me.BorrarToolStripMenuItem.Name = "BorrarToolStripMenuItem"
+        Me.BorrarToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.BorrarToolStripMenuItem.Text = "Borrar"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox1.Location = New System.Drawing.Point(9, 266)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(486, 100)
+        Me.PictureBox1.TabIndex = 3
+        Me.PictureBox1.TabStop = False
+        '
+        'AñadirHardwareToolStripMenuItem
+        '
+        Me.AñadirHardwareToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.drive_add
+        Me.AñadirHardwareToolStripMenuItem.Name = "AñadirHardwareToolStripMenuItem"
+        Me.AñadirHardwareToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.AñadirHardwareToolStripMenuItem.Text = "Añadir"
+        '
+        'VerHardwareToolStripMenuItem
+        '
+        Me.VerHardwareToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.drive_magnify
+        Me.VerHardwareToolStripMenuItem.Name = "VerHardwareToolStripMenuItem"
+        Me.VerHardwareToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.VerHardwareToolStripMenuItem.Text = "Ver"
         '
         'frmVerEquipo
         '
@@ -307,8 +348,9 @@ Partial Class frmVerEquipo
         Me.tabEquipo.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabHardware.ResumeLayout(False)
+        Me.mnHardware.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -319,7 +361,7 @@ Partial Class frmVerEquipo
     Friend WithEvents tabSoft As System.Windows.Forms.TabPage
     Friend WithEvents tabIncidencias As System.Windows.Forms.TabPage
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnEditar As System.Windows.Forms.Button
     Friend WithEvents txtNotas As System.Windows.Forms.TextBox
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
     Friend WithEvents Label5 As System.Windows.Forms.Label
@@ -327,7 +369,7 @@ Partial Class frmVerEquipo
     Friend WithEvents lblTipo As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents lblNombre As System.Windows.Forms.Label
-    Friend WithEvents ListView1 As System.Windows.Forms.ListView
+    Friend WithEvents listadoHardware As System.Windows.Forms.ListView
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents imgListHardware As System.Windows.Forms.ImageList
@@ -335,4 +377,9 @@ Partial Class frmVerEquipo
     Friend WithEvents imgListSoft As System.Windows.Forms.ImageList
     Friend WithEvents imgListIncidencias As System.Windows.Forms.ImageList
     Friend WithEvents lblSO As System.Windows.Forms.Label
+    Friend WithEvents mnHardware As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents AñadirHardwareToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents VerHardwareToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents EditarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BorrarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class
