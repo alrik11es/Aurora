@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class MiControlUsuario
+Partial Class MiConUsuUsuarios
     Inherits System.Windows.Forms.UserControl
 
     'UserControl reemplaza a Dispose para limpiar la lista de componentes.
@@ -37,7 +37,7 @@ Partial Class MiControlUsuario
         'lblUsuario
         '
         Me.lblUsuario.AutoSize = True
-        Me.lblUsuario.Location = New System.Drawing.Point(6, 38)
+        Me.lblUsuario.Location = New System.Drawing.Point(19, 38)
         Me.lblUsuario.Name = "lblUsuario"
         Me.lblUsuario.Size = New System.Drawing.Size(69, 19)
         Me.lblUsuario.TabIndex = 0
@@ -55,7 +55,7 @@ Partial Class MiControlUsuario
         'lblTelefono
         '
         Me.lblTelefono.AutoSize = True
-        Me.lblTelefono.Location = New System.Drawing.Point(6, 142)
+        Me.lblTelefono.Location = New System.Drawing.Point(11, 142)
         Me.lblTelefono.Name = "lblTelefono"
         Me.lblTelefono.Size = New System.Drawing.Size(77, 19)
         Me.lblTelefono.TabIndex = 2
@@ -64,7 +64,7 @@ Partial Class MiControlUsuario
         'lblEmail
         '
         Me.lblEmail.AutoSize = True
-        Me.lblEmail.Location = New System.Drawing.Point(6, 192)
+        Me.lblEmail.Location = New System.Drawing.Point(34, 192)
         Me.lblEmail.Name = "lblEmail"
         Me.lblEmail.Size = New System.Drawing.Size(54, 19)
         Me.lblEmail.TabIndex = 3
@@ -72,30 +72,30 @@ Partial Class MiControlUsuario
         '
         'txtUsuario
         '
-        Me.txtUsuario.Location = New System.Drawing.Point(92, 35)
+        Me.txtUsuario.Location = New System.Drawing.Point(115, 35)
         Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(142, 27)
+        Me.txtUsuario.Size = New System.Drawing.Size(190, 27)
         Me.txtUsuario.TabIndex = 4
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(102, 87)
+        Me.txtPassword.Location = New System.Drawing.Point(115, 87)
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(132, 27)
+        Me.txtPassword.Size = New System.Drawing.Size(190, 27)
         Me.txtPassword.TabIndex = 5
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(102, 139)
+        Me.txtTelefono.Location = New System.Drawing.Point(115, 139)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(132, 27)
+        Me.txtTelefono.Size = New System.Drawing.Size(190, 27)
         Me.txtTelefono.TabIndex = 6
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(92, 189)
+        Me.txtEmail.Location = New System.Drawing.Point(115, 189)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(142, 27)
+        Me.txtEmail.Size = New System.Drawing.Size(190, 27)
         Me.txtEmail.TabIndex = 7
         '
         'groupBox
@@ -110,20 +110,20 @@ Partial Class MiControlUsuario
         Me.groupBox.Controls.Add(Me.txtUsuario)
         Me.groupBox.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.groupBox.ForeColor = System.Drawing.Color.Black
-        Me.groupBox.Location = New System.Drawing.Point(56, 38)
+        Me.groupBox.Location = New System.Drawing.Point(16, 16)
         Me.groupBox.Name = "groupBox"
-        Me.groupBox.Size = New System.Drawing.Size(240, 233)
+        Me.groupBox.Size = New System.Drawing.Size(323, 233)
         Me.groupBox.TabIndex = 9
         Me.groupBox.TabStop = False
         Me.groupBox.Text = "Aurora v1.0"
         '
-        'MiControlUsuario
+        'MiConUsuUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.groupBox)
-        Me.Name = "MiControlUsuario"
-        Me.Size = New System.Drawing.Size(422, 338)
+        Me.Name = "MiConUsuUsuarios"
+        Me.Size = New System.Drawing.Size(360, 269)
         Me.groupBox.ResumeLayout(False)
         Me.groupBox.PerformLayout()
         Me.ResumeLayout(False)

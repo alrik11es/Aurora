@@ -101,24 +101,6 @@
     <Compile Include="equipos\frmVerEquipo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="usuarios\frmBorrarUsuariovb.Designer.vb">
-      <DependentUpon>frmBorrarUsuariovb.vb</DependentUpon>
-    </Compile>
-    <Compile Include="usuarios\frmBorrarUsuariovb.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="usuarios\frmCrearUsuario.Designer.vb">
-      <DependentUpon>frmCrearUsuario.vb</DependentUpon>
-    </Compile>
-    <Compile Include="usuarios\frmCrearUsuario.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="usuarios\frmEditarUsuario.Designer.vb">
-      <DependentUpon>frmEditarUsuario.vb</DependentUpon>
-    </Compile>
-    <Compile Include="usuarios\frmEditarUsuario.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="localizaciones\frmEditarLocalizacion.Designer.vb">
       <DependentUpon>frmEditarLocalizacion.vb</DependentUpon>
     </Compile>
@@ -162,6 +144,12 @@
     <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="usuarios\frmUsuarios.Designer.vb">
+      <DependentUpon>frmUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="usuarios\frmUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="usuarios\MiControlUsuario.Designer.vb">
       <DependentUpon>MiControlUsuario.vb</DependentUpon>
     </Compile>
@@ -196,15 +184,6 @@
     <EmbeddedResource Include="equipos\frmVerEquipo.resx">
       <DependentUpon>frmVerEquipo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="usuarios\frmBorrarUsuariovb.resx">
-      <DependentUpon>frmBorrarUsuariovb.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="usuarios\frmCrearUsuario.resx">
-      <DependentUpon>frmCrearUsuario.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="usuarios\frmEditarUsuario.resx">
-      <DependentUpon>frmEditarUsuario.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="localizaciones\frmEditarLocalizacion.resx">
       <DependentUpon>frmEditarLocalizacion.vb</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usuarios\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="usuarios\MiControlUsuario.resx">
       <DependentUpon>MiControlUsuario.vb</DependentUpon>

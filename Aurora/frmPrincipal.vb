@@ -10,6 +10,7 @@
             frmLogin.MdiParent = Me
             frmLogin.Show()
         End If
+        'PRUEBAS MARTA frmUsuarios.Show()
     End Sub
 
     Private Sub SalirToolStripMenuItem1_Click(sender As System.Object, e As System.EventArgs) Handles SalirToolStripMenuItem1.Click
