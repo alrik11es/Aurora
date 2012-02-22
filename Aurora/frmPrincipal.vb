@@ -50,4 +50,9 @@
     Private Sub EquipoToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles EquipoToolStripMenuItem.Click
 
     End Sub
+
+    Private Sub TécnicoToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles TécnicoToolStripMenuItem.Click
+        frmUsuarios.MdiParent = Me
+        frmUsuarios.Show()
+    End Sub
 End Class

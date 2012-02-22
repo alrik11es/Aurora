@@ -64,7 +64,7 @@ Partial Class frmPrincipal
         '
         Me.ArchivoToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuItemConectar, Me.ConfigurarMySQLToolStripMenuItem, Me.SalirToolStripMenuItem1})
         Me.ArchivoToolStripMenuItem1.Name = "ArchivoToolStripMenuItem1"
-        Me.ArchivoToolStripMenuItem1.Size = New System.Drawing.Size(60, 20)
+        Me.ArchivoToolStripMenuItem1.Size = New System.Drawing.Size(55, 20)
         Me.ArchivoToolStripMenuItem1.Text = "&Archivo"
         '
         'menuItemConectar
@@ -95,42 +95,42 @@ Partial Class frmPrincipal
         Me.menuItemVentana.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LocalizaciónToolStripMenuItem, Me.EquipoToolStripMenuItem, Me.TécnicoToolStripMenuItem, Me.IncidenciasToolStripMenuItem1})
         Me.menuItemVentana.Enabled = False
         Me.menuItemVentana.Name = "menuItemVentana"
-        Me.menuItemVentana.Size = New System.Drawing.Size(62, 20)
+        Me.menuItemVentana.Size = New System.Drawing.Size(59, 20)
         Me.menuItemVentana.Text = "&Ventana"
         '
         'LocalizaciónToolStripMenuItem
         '
         Me.LocalizaciónToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.map_magnify
         Me.LocalizaciónToolStripMenuItem.Name = "LocalizaciónToolStripMenuItem"
-        Me.LocalizaciónToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.LocalizaciónToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.LocalizaciónToolStripMenuItem.Text = "&Localización"
         '
         'EquipoToolStripMenuItem
         '
         Me.EquipoToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.computer
         Me.EquipoToolStripMenuItem.Name = "EquipoToolStripMenuItem"
-        Me.EquipoToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.EquipoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EquipoToolStripMenuItem.Text = "&Equipos"
         '
         'TécnicoToolStripMenuItem
         '
         Me.TécnicoToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.status_online
         Me.TécnicoToolStripMenuItem.Name = "TécnicoToolStripMenuItem"
-        Me.TécnicoToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.TécnicoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TécnicoToolStripMenuItem.Text = "&Técnicos"
         '
         'IncidenciasToolStripMenuItem1
         '
         Me.IncidenciasToolStripMenuItem1.Image = Global.Aurora.My.Resources.Resources.bug
         Me.IncidenciasToolStripMenuItem1.Name = "IncidenciasToolStripMenuItem1"
-        Me.IncidenciasToolStripMenuItem1.Size = New System.Drawing.Size(139, 22)
+        Me.IncidenciasToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.IncidenciasToolStripMenuItem1.Text = "I&ncidencias"
         '
         'AyudaToolStripMenuItem
         '
         Me.AyudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VerLaAyudaToolStripMenuItem, Me.AcercaDeToolStripMenuItem})
         Me.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
-        Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
+        Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
         Me.AyudaToolStripMenuItem.Text = "Ayuda"
         '
         'VerLaAyudaToolStripMenuItem
@@ -138,13 +138,13 @@ Partial Class frmPrincipal
         Me.VerLaAyudaToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.help
         Me.VerLaAyudaToolStripMenuItem.Name = "VerLaAyudaToolStripMenuItem"
         Me.VerLaAyudaToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F1), System.Windows.Forms.Keys)
-        Me.VerLaAyudaToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
+        Me.VerLaAyudaToolStripMenuItem.Size = New System.Drawing.Size(189, 22)
         Me.VerLaAyudaToolStripMenuItem.Text = "Ver la ayuda"
         '
         'AcercaDeToolStripMenuItem
         '
         Me.AcercaDeToolStripMenuItem.Name = "AcercaDeToolStripMenuItem"
-        Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
+        Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(189, 22)
         Me.AcercaDeToolStripMenuItem.Text = "Acerca de Aurora"
         '
         'ArchivoToolStripMenuItem
@@ -158,21 +158,21 @@ Partial Class frmPrincipal
         '
         Me.ConectarToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.connect
         Me.ConectarToolStripMenuItem.Name = "ConectarToolStripMenuItem"
-        Me.ConectarToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.ConectarToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
         Me.ConectarToolStripMenuItem.Text = "C&onectar..."
         '
         'ConexiónMySQLToolStripMenuItem
         '
         Me.ConexiónMySQLToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.database_connect
         Me.ConexiónMySQLToolStripMenuItem.Name = "ConexiónMySQLToolStripMenuItem"
-        Me.ConexiónMySQLToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.ConexiónMySQLToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
         Me.ConexiónMySQLToolStripMenuItem.Text = "&Conexión MySQL"
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.door
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
         Me.SalirToolStripMenuItem.Text = "&Salir"
         '
         'OpcionesToolStripMenuItem
@@ -206,21 +206,21 @@ Partial Class frmPrincipal
         '
         Me.HardwareToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.server
         Me.HardwareToolStripMenuItem.Name = "HardwareToolStripMenuItem"
-        Me.HardwareToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.HardwareToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
         Me.HardwareToolStripMenuItem.Text = "&Hardware"
         '
         'SoftwareToolStripMenuItem
         '
         Me.SoftwareToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.application
         Me.SoftwareToolStripMenuItem.Name = "SoftwareToolStripMenuItem"
-        Me.SoftwareToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.SoftwareToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
         Me.SoftwareToolStripMenuItem.Text = "&Software"
         '
         'ConfiguracionesToolStripMenuItem
         '
         Me.ConfiguracionesToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.page_gear
         Me.ConfiguracionesToolStripMenuItem.Name = "ConfiguracionesToolStripMenuItem"
-        Me.ConfiguracionesToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.ConfiguracionesToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
         Me.ConfiguracionesToolStripMenuItem.Text = "&Configuraciones"
         '
         'TecnicosToolStripMenuItem

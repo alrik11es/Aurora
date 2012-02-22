@@ -27,7 +27,9 @@ Partial Class frmUsuarios
         Me.btnCrear = New System.Windows.Forms.Button()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.MiConUsuUsuarios = New Aurora.MiConUsuUsuarios()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnModificar
@@ -75,6 +77,14 @@ Partial Class frmUsuarios
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(184, 87)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
+        Me.DataGridView1.TabIndex = 6
+        '
         'MiConUsuUsuarios
         '
         Me.MiConUsuUsuarios.Email = ""
@@ -92,6 +102,7 @@ Partial Class frmUsuarios
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(436, 430)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.btnCrear)
@@ -100,6 +111,7 @@ Partial Class frmUsuarios
         Me.Controls.Add(Me.MiConUsuUsuarios)
         Me.Name = "frmUsuarios"
         Me.Text = "Técnicos"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -109,4 +121,5 @@ Partial Class frmUsuarios
     Friend WithEvents btnCrear As System.Windows.Forms.Button
     Friend WithEvents btnLimpiar As System.Windows.Forms.Button
     Friend WithEvents btnSalir As System.Windows.Forms.Button
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
 End Class
