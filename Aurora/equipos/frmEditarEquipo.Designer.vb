@@ -25,6 +25,8 @@ Partial Class frmEditarEquipo
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEditarEquipo))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cbSOperativo = New System.Windows.Forms.ComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.dtFecha = New System.Windows.Forms.DateTimePicker()
@@ -35,8 +37,6 @@ Partial Class frmEditarEquipo
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.btnAdd = New System.Windows.Forms.Button()
-        Me.cbSOperativo = New System.Windows.Forms.ComboBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -69,6 +69,25 @@ Partial Class frmEditarEquipo
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos del equipo"
+        '
+        'cbSOperativo
+        '
+        Me.cbSOperativo.FormattingEnabled = True
+        Me.cbSOperativo.Items.AddRange(New Object() {"Otro", "Windows 2000", "Windows XP", "Windows Vista", "Windows 7", "Windows 8", "Windows 2003 Server", "Windows 2008 Server", "Linux Redhat", "Linux Debian", "Solaris", "Unix", "AIX", "ESX", "ESXi", "MacOS", "Android", "OpenBSD"})
+        Me.cbSOperativo.Location = New System.Drawing.Point(105, 102)
+        Me.cbSOperativo.Name = "cbSOperativo"
+        Me.cbSOperativo.Size = New System.Drawing.Size(190, 21)
+        Me.cbSOperativo.TabIndex = 12
+        Me.cbSOperativo.Text = "Seleccionar..."
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(6, 106)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(94, 13)
+        Me.Label6.TabIndex = 11
+        Me.Label6.Text = "Sistema operativo:"
         '
         'LinkLabel1
         '
@@ -125,6 +144,7 @@ Partial Class frmEditarEquipo
         Me.slTipo.Name = "slTipo"
         Me.slTipo.Size = New System.Drawing.Size(191, 21)
         Me.slTipo.TabIndex = 4
+        Me.slTipo.Text = "Seleccionar..."
         '
         'txtNotas
         '
@@ -158,24 +178,6 @@ Partial Class frmEditarEquipo
         Me.btnAdd.TabIndex = 2
         Me.btnAdd.Text = "Editar"
         Me.btnAdd.UseVisualStyleBackColor = True
-        '
-        'cbSOperativo
-        '
-        Me.cbSOperativo.FormattingEnabled = True
-        Me.cbSOperativo.Items.AddRange(New Object() {"Windows 2000", "Windows XP", "Windows Vista", "Windows 7", "Windows 8", "Windows 2003 Server", "Windows 2008 Server", "Linux Redhat", "Linux Debian", "Solaris", "Unix", "AIX", "ESX", "ESXi", "MacOS", "Android", "OpenBSD"})
-        Me.cbSOperativo.Location = New System.Drawing.Point(105, 102)
-        Me.cbSOperativo.Name = "cbSOperativo"
-        Me.cbSOperativo.Size = New System.Drawing.Size(190, 21)
-        Me.cbSOperativo.TabIndex = 12
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(6, 106)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(94, 13)
-        Me.Label6.TabIndex = 11
-        Me.Label6.Text = "Sistema operativo:"
         '
         'frmEditarEquipo
         '

@@ -27,6 +27,7 @@ Partial Class frmVerEquipo
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tabEquipo = New System.Windows.Forms.TabPage()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblSO = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -39,6 +40,11 @@ Partial Class frmVerEquipo
         Me.lblNombre = New System.Windows.Forms.Label()
         Me.tabHardware = New System.Windows.Forms.TabPage()
         Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ctMenuHardware = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.AñadirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BorrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tabConfig = New System.Windows.Forms.TabPage()
         Me.tabSoft = New System.Windows.Forms.TabPage()
         Me.tabIncidencias = New System.Windows.Forms.TabPage()
@@ -46,12 +52,27 @@ Partial Class frmVerEquipo
         Me.imgListConfig = New System.Windows.Forms.ImageList(Me.components)
         Me.imgListSoft = New System.Windows.Forms.ImageList(Me.components)
         Me.imgListIncidencias = New System.Windows.Forms.ImageList(Me.components)
-        Me.lblSO = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.tabEquipo.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabHardware.SuspendLayout()
+        Me.ctMenuHardware.SuspendLayout()
+        Me.tabConfig.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox4.SuspendLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -98,6 +119,15 @@ Partial Class frmVerEquipo
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos del equipo"
+        '
+        'lblSO
+        '
+        Me.lblSO.AutoSize = True
+        Me.lblSO.Location = New System.Drawing.Point(6, 89)
+        Me.lblSO.Name = "lblSO"
+        Me.lblSO.Size = New System.Drawing.Size(94, 13)
+        Me.lblSO.TabIndex = 13
+        Me.lblSO.Text = "Sistema operativo:"
         '
         'Label6
         '
@@ -203,6 +233,7 @@ Partial Class frmVerEquipo
         '
         'ListView1
         '
+        Me.ListView1.ContextMenuStrip = Me.ctMenuHardware
         Me.ListView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ListView1.Location = New System.Drawing.Point(0, 0)
         Me.ListView1.Name = "ListView1"
@@ -210,8 +241,45 @@ Partial Class frmVerEquipo
         Me.ListView1.TabIndex = 0
         Me.ListView1.UseCompatibleStateImageBehavior = False
         '
+        'ctMenuHardware
+        '
+        Me.ctMenuHardware.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirToolStripMenuItem, Me.VerToolStripMenuItem, Me.EditarToolStripMenuItem, Me.BorrarToolStripMenuItem})
+        Me.ctMenuHardware.Name = "ContextMenuStrip1"
+        Me.ctMenuHardware.Size = New System.Drawing.Size(110, 92)
+        '
+        'AñadirToolStripMenuItem
+        '
+        Me.AñadirToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.drive_add
+        Me.AñadirToolStripMenuItem.Name = "AñadirToolStripMenuItem"
+        Me.AñadirToolStripMenuItem.Size = New System.Drawing.Size(109, 22)
+        Me.AñadirToolStripMenuItem.Text = "Añadir"
+        '
+        'VerToolStripMenuItem
+        '
+        Me.VerToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.drive_magnify
+        Me.VerToolStripMenuItem.Name = "VerToolStripMenuItem"
+        Me.VerToolStripMenuItem.Size = New System.Drawing.Size(109, 22)
+        Me.VerToolStripMenuItem.Text = "Ver"
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.drive_edit
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(109, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'BorrarToolStripMenuItem
+        '
+        Me.BorrarToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.drive_delete
+        Me.BorrarToolStripMenuItem.Name = "BorrarToolStripMenuItem"
+        Me.BorrarToolStripMenuItem.Size = New System.Drawing.Size(109, 22)
+        Me.BorrarToolStripMenuItem.Text = "Borrar"
+        '
         'tabConfig
         '
+        Me.tabConfig.Controls.Add(Me.GroupBox4)
+        Me.tabConfig.Controls.Add(Me.GroupBox3)
+        Me.tabConfig.Controls.Add(Me.GroupBox2)
         Me.tabConfig.Location = New System.Drawing.Point(4, 22)
         Me.tabConfig.Name = "tabConfig"
         Me.tabConfig.Size = New System.Drawing.Size(515, 401)
@@ -282,14 +350,79 @@ Partial Class frmVerEquipo
         Me.imgListIncidencias.Images.SetKeyName(4, "switch_icon.png")
         Me.imgListIncidencias.Images.SetKeyName(5, "image.png")
         '
-        'lblSO
+        'DataGridView1
         '
-        Me.lblSO.AutoSize = True
-        Me.lblSO.Location = New System.Drawing.Point(6, 89)
-        Me.lblSO.Name = "lblSO"
-        Me.lblSO.Size = New System.Drawing.Size(81, 13)
-        Me.lblSO.TabIndex = 13
-        Me.lblSO.Text = "Tipo de equipo:"
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(6, 19)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(192, 161)
+        Me.DataGridView1.TabIndex = 2
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Button2)
+        Me.GroupBox2.Controls.Add(Me.DataGridView1)
+        Me.GroupBox2.Location = New System.Drawing.Point(8, 8)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(204, 216)
+        Me.GroupBox2.TabIndex = 5
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Listado de IP's"
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.Button3)
+        Me.GroupBox3.Controls.Add(Me.DataGridView2)
+        Me.GroupBox3.Location = New System.Drawing.Point(218, 8)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(289, 216)
+        Me.GroupBox3.TabIndex = 6
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Listado de usuarios y contraseñas"
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(6, 19)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(277, 161)
+        Me.DataGridView2.TabIndex = 3
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.DataGridView3)
+        Me.GroupBox4.Location = New System.Drawing.Point(8, 230)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(498, 163)
+        Me.GroupBox4.TabIndex = 7
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Miscelánea"
+        '
+        'DataGridView3
+        '
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.Location = New System.Drawing.Point(6, 19)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.Size = New System.Drawing.Size(487, 138)
+        Me.DataGridView3.TabIndex = 0
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(50, 186)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(102, 23)
+        Me.Button2.TabIndex = 3
+        Me.Button2.Text = "Conectar con IP"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(33, 186)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(223, 23)
+        Me.Button3.TabIndex = 4
+        Me.Button3.Text = "Conectar a la IP con usuario y contraseña"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'frmVerEquipo
         '
@@ -309,6 +442,14 @@ Partial Class frmVerEquipo
         Me.GroupBox1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabHardware.ResumeLayout(False)
+        Me.ctMenuHardware.ResumeLayout(False)
+        Me.tabConfig.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox3.ResumeLayout(False)
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox4.ResumeLayout(False)
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -335,4 +476,17 @@ Partial Class frmVerEquipo
     Friend WithEvents imgListSoft As System.Windows.Forms.ImageList
     Friend WithEvents imgListIncidencias As System.Windows.Forms.ImageList
     Friend WithEvents lblSO As System.Windows.Forms.Label
+    Friend WithEvents ctMenuHardware As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents VerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents EditarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BorrarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AñadirToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
+    Friend WithEvents DataGridView3 As System.Windows.Forms.DataGridView
+    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
 End Class

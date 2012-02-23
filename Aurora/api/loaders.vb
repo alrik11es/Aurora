@@ -34,6 +34,7 @@ Module loaders
 
     Public Sub cargaListadoEquipos(query As String, campo_a_mostrar As String, listado As ListView)
         Dim recordset As MySqlDataReader = frmPrincipal.conexion.exec(query)
+
         Dim id As Integer
         listado.Clear()
         If recordset.HasRows Then
@@ -43,10 +44,24 @@ Module loaders
                 item.Tag = id
                 item.Text = recordset.GetString(campo_a_mostrar)
                 item.ImageIndex = recordset.GetString("tipo")
+                item.SubItems.Add(recordset.GetString("empresa"))
                 listado.Items.Add(item)
             Loop While recordset.Read()
-        End If
 
+            Dim columna As ColumnHeader
+
+            columna = New ColumnHeader()
+            columna.Text = "Nombre de equipo"
+            columna.Width = 200
+            listado.Columns.Add(columna)
+
+            columna = New ColumnHeader()
+            columna.Text = "Localizacion"
+            columna.Width = 200
+            listado.Columns.Add(columna)
+
+        End If
         recordset.Close()
+
     End Sub
 End Module

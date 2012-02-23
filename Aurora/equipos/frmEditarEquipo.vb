@@ -12,6 +12,7 @@ Public Class frmEditarEquipo
         slTipo.SelectedIndex = recordset.GetString("tipo")
         cbSOperativo.SelectedIndex = recordset.GetString("so")
         dtFecha.Text = recordset.GetString("fecha_instalacion")
+        Me.localizacion = recordset.GetString("localizacion")
         recordset.Close()
 
         recordset = frmPrincipal.conexion.exec("SELECT * FROM localizacion WHERE id = " & localizacion)

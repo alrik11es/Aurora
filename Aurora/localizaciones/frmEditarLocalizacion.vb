@@ -5,7 +5,7 @@ Public Class frmEditarLocalizacion
     Public id As Integer
 
     Public Sub carga()
-        cargaListadoEquipos("SELECT * FROM equipo WHERE localizacion = " & id, "nombre", listadoEquipos)
+        cargaListadoEquipos("SELECT * FROM equipo INNER JOIN localizacion ON equipo.localizacion = localizacion.id WHERE localizacion.id = " & id, "nombre", listadoEquipos)
     End Sub
 
     Private Sub frmEditarLocalizacion_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load

@@ -52,7 +52,7 @@
     <ApplicationIcon>aurora.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.3.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -99,6 +99,12 @@
       <DependentUpon>frmVerEquipo.vb</DependentUpon>
     </Compile>
     <Compile Include="equipos\frmVerEquipo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hardware\frmAddHardware.Designer.vb">
+      <DependentUpon>frmAddHardware.vb</DependentUpon>
+    </Compile>
+    <Compile Include="hardware\frmAddHardware.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="localizaciones\frmEditarLocalizacion.Designer.vb">
@@ -181,8 +187,14 @@
     <EmbeddedResource Include="equipos\frmAddEquipo.resx">
       <DependentUpon>frmAddEquipo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="equipos\frmListarEquipos.resx">
+      <DependentUpon>frmListarEquipos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="equipos\frmVerEquipo.resx">
       <DependentUpon>frmVerEquipo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hardware\frmAddHardware.resx">
+      <DependentUpon>frmAddHardware.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="localizaciones\frmEditarLocalizacion.resx">
       <DependentUpon>frmEditarLocalizacion.vb</DependentUpon>
@@ -245,6 +257,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="aurora.ico" />
+    <None Include="Resources\drive_web.png" />
+    <None Include="Resources\drive_user.png" />
+    <None Include="Resources\drive_rename.png" />
+    <None Include="Resources\drive_network.png" />
+    <None Include="Resources\drive_magnify1.png" />
+    <None Include="Resources\drive_link.png" />
+    <None Include="Resources\drive_key.png" />
+    <None Include="Resources\drive_go.png" />
+    <None Include="Resources\drive_error.png" />
+    <None Include="Resources\drive_edit1.png" />
+    <None Include="Resources\drive_disk.png" />
+    <None Include="Resources\drive_delete1.png" />
+    <None Include="Resources\drive_cd_empty.png" />
+    <None Include="Resources\drive_cd.png" />
+    <None Include="Resources\drive_burn.png" />
+    <None Include="Resources\drive_add1.png" />
+    <None Include="Resources\drive.png" />
     <None Include="Resources\server_uncompressed.png" />
     <None Include="Resources\server_link.png" />
     <None Include="Resources\server_lightning.png" />
@@ -294,6 +323,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

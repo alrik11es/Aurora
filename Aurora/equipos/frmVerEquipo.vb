@@ -16,6 +16,7 @@ Public Class frmVerEquipo
         lblTipo.Text = "Tipo de equipo: " & frmEditarEquipo.slTipo.Items(recordset.GetString("tipo")).ToString
         lblSO.Text = "Sistema operativo: " & recordset.GetString("so")
         lblFecha.Text = "Fecha de instalación: " & recordset.GetString("fecha_instalacion")
+        Me.localizacion = recordset.GetString("localizacion")
         recordset.Close()
 
         recordset = frmPrincipal.conexion.exec("SELECT * FROM localizacion WHERE id = " & localizacion)
