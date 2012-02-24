@@ -30,7 +30,7 @@ Partial Class frmVerEquipo
         Me.lblSO = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnEditarEquipo = New System.Windows.Forms.Button()
         Me.txtNotas = New System.Windows.Forms.TextBox()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -46,20 +46,20 @@ Partial Class frmVerEquipo
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BorrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tabConfig = New System.Windows.Forms.TabPage()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.dataGridMisc = New System.Windows.Forms.DataGridView()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.dataGridUP = New System.Windows.Forms.DataGridView()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btnConnectIP = New System.Windows.Forms.Button()
+        Me.dataGridIp = New System.Windows.Forms.DataGridView()
         Me.tabSoft = New System.Windows.Forms.TabPage()
         Me.tabIncidencias = New System.Windows.Forms.TabPage()
         Me.imgListHardware = New System.Windows.Forms.ImageList(Me.components)
         Me.imgListConfig = New System.Windows.Forms.ImageList(Me.components)
         Me.imgListSoft = New System.Windows.Forms.ImageList(Me.components)
         Me.imgListIncidencias = New System.Windows.Forms.ImageList(Me.components)
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.tabEquipo.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -67,12 +67,12 @@ Partial Class frmVerEquipo
         Me.tabHardware.SuspendLayout()
         Me.ctMenuHardware.SuspendLayout()
         Me.tabConfig.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dataGridMisc, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.dataGridUP, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
+        CType(Me.dataGridIp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -105,7 +105,7 @@ Partial Class frmVerEquipo
         Me.GroupBox1.Controls.Add(Me.lblSO)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.PictureBox1)
-        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.btnEditarEquipo)
         Me.GroupBox1.Controls.Add(Me.txtNotas)
         Me.GroupBox1.Controls.Add(Me.LinkLabel1)
         Me.GroupBox1.Controls.Add(Me.Label5)
@@ -147,14 +147,14 @@ Partial Class frmVerEquipo
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
         '
-        'Button1
+        'btnEditarEquipo
         '
-        Me.Button1.Location = New System.Drawing.Point(420, 15)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "Editar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnEditarEquipo.Location = New System.Drawing.Point(420, 15)
+        Me.btnEditarEquipo.Name = "btnEditarEquipo"
+        Me.btnEditarEquipo.Size = New System.Drawing.Size(75, 23)
+        Me.btnEditarEquipo.TabIndex = 11
+        Me.btnEditarEquipo.Text = "Editar"
+        Me.btnEditarEquipo.UseVisualStyleBackColor = True
         '
         'txtNotas
         '
@@ -245,34 +245,34 @@ Partial Class frmVerEquipo
         '
         Me.ctMenuHardware.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirToolStripMenuItem, Me.VerToolStripMenuItem, Me.EditarToolStripMenuItem, Me.BorrarToolStripMenuItem})
         Me.ctMenuHardware.Name = "ContextMenuStrip1"
-        Me.ctMenuHardware.Size = New System.Drawing.Size(110, 92)
+        Me.ctMenuHardware.Size = New System.Drawing.Size(117, 92)
         '
         'AñadirToolStripMenuItem
         '
         Me.AñadirToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.drive_add
         Me.AñadirToolStripMenuItem.Name = "AñadirToolStripMenuItem"
-        Me.AñadirToolStripMenuItem.Size = New System.Drawing.Size(109, 22)
+        Me.AñadirToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.AñadirToolStripMenuItem.Text = "Añadir"
         '
         'VerToolStripMenuItem
         '
         Me.VerToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.drive_magnify
         Me.VerToolStripMenuItem.Name = "VerToolStripMenuItem"
-        Me.VerToolStripMenuItem.Size = New System.Drawing.Size(109, 22)
+        Me.VerToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.VerToolStripMenuItem.Text = "Ver"
         '
         'EditarToolStripMenuItem
         '
         Me.EditarToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.drive_edit
         Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(109, 22)
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.EditarToolStripMenuItem.Text = "Editar"
         '
         'BorrarToolStripMenuItem
         '
         Me.BorrarToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.drive_delete
         Me.BorrarToolStripMenuItem.Name = "BorrarToolStripMenuItem"
-        Me.BorrarToolStripMenuItem.Size = New System.Drawing.Size(109, 22)
+        Me.BorrarToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.BorrarToolStripMenuItem.Text = "Borrar"
         '
         'tabConfig
@@ -286,6 +286,82 @@ Partial Class frmVerEquipo
         Me.tabConfig.TabIndex = 3
         Me.tabConfig.Text = "Configuraciones"
         Me.tabConfig.UseVisualStyleBackColor = True
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.dataGridMisc)
+        Me.GroupBox4.Location = New System.Drawing.Point(8, 230)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(498, 163)
+        Me.GroupBox4.TabIndex = 7
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Miscelánea"
+        '
+        'dataGridMisc
+        '
+        Me.dataGridMisc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dataGridMisc.Location = New System.Drawing.Point(6, 19)
+        Me.dataGridMisc.Name = "dataGridMisc"
+        Me.dataGridMisc.Size = New System.Drawing.Size(487, 138)
+        Me.dataGridMisc.TabIndex = 0
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.Button3)
+        Me.GroupBox3.Controls.Add(Me.dataGridUP)
+        Me.GroupBox3.Location = New System.Drawing.Point(218, 8)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(289, 216)
+        Me.GroupBox3.TabIndex = 6
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Listado de usuarios y contraseñas"
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(33, 186)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(223, 23)
+        Me.Button3.TabIndex = 4
+        Me.Button3.Text = "Conectar a la IP con usuario y contraseña"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'dataGridUP
+        '
+        Me.dataGridUP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dataGridUP.Location = New System.Drawing.Point(6, 19)
+        Me.dataGridUP.Name = "dataGridUP"
+        Me.dataGridUP.Size = New System.Drawing.Size(277, 161)
+        Me.dataGridUP.TabIndex = 3
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.btnConnectIP)
+        Me.GroupBox2.Controls.Add(Me.dataGridIp)
+        Me.GroupBox2.Location = New System.Drawing.Point(8, 8)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(204, 216)
+        Me.GroupBox2.TabIndex = 5
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Listado de IP's"
+        '
+        'btnConnectIP
+        '
+        Me.btnConnectIP.Location = New System.Drawing.Point(50, 186)
+        Me.btnConnectIP.Name = "btnConnectIP"
+        Me.btnConnectIP.Size = New System.Drawing.Size(102, 23)
+        Me.btnConnectIP.TabIndex = 3
+        Me.btnConnectIP.Text = "Conectar con IP"
+        Me.btnConnectIP.UseVisualStyleBackColor = True
+        '
+        'dataGridIp
+        '
+        Me.dataGridIp.AllowUserToResizeRows = False
+        Me.dataGridIp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dataGridIp.Location = New System.Drawing.Point(6, 19)
+        Me.dataGridIp.Name = "dataGridIp"
+        Me.dataGridIp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dataGridIp.Size = New System.Drawing.Size(192, 161)
+        Me.dataGridIp.TabIndex = 2
         '
         'tabSoft
         '
@@ -350,80 +426,6 @@ Partial Class frmVerEquipo
         Me.imgListIncidencias.Images.SetKeyName(4, "switch_icon.png")
         Me.imgListIncidencias.Images.SetKeyName(5, "image.png")
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 19)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(192, 161)
-        Me.DataGridView1.TabIndex = 2
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.Button2)
-        Me.GroupBox2.Controls.Add(Me.DataGridView1)
-        Me.GroupBox2.Location = New System.Drawing.Point(8, 8)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(204, 216)
-        Me.GroupBox2.TabIndex = 5
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Listado de IP's"
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.Button3)
-        Me.GroupBox3.Controls.Add(Me.DataGridView2)
-        Me.GroupBox3.Location = New System.Drawing.Point(218, 8)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(289, 216)
-        Me.GroupBox3.TabIndex = 6
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Listado de usuarios y contraseñas"
-        '
-        'DataGridView2
-        '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(6, 19)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(277, 161)
-        Me.DataGridView2.TabIndex = 3
-        '
-        'GroupBox4
-        '
-        Me.GroupBox4.Controls.Add(Me.DataGridView3)
-        Me.GroupBox4.Location = New System.Drawing.Point(8, 230)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(498, 163)
-        Me.GroupBox4.TabIndex = 7
-        Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "Miscelánea"
-        '
-        'DataGridView3
-        '
-        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView3.Location = New System.Drawing.Point(6, 19)
-        Me.DataGridView3.Name = "DataGridView3"
-        Me.DataGridView3.Size = New System.Drawing.Size(487, 138)
-        Me.DataGridView3.TabIndex = 0
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(50, 186)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(102, 23)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Conectar con IP"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(33, 186)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(223, 23)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "Conectar a la IP con usuario y contraseña"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'frmVerEquipo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -444,12 +446,12 @@ Partial Class frmVerEquipo
         Me.tabHardware.ResumeLayout(False)
         Me.ctMenuHardware.ResumeLayout(False)
         Me.tabConfig.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox3.ResumeLayout(False)
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dataGridMisc, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox3.ResumeLayout(False)
+        CType(Me.dataGridUP, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
+        CType(Me.dataGridIp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -460,7 +462,7 @@ Partial Class frmVerEquipo
     Friend WithEvents tabSoft As System.Windows.Forms.TabPage
     Friend WithEvents tabIncidencias As System.Windows.Forms.TabPage
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnEditarEquipo As System.Windows.Forms.Button
     Friend WithEvents txtNotas As System.Windows.Forms.TextBox
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
     Friend WithEvents Label5 As System.Windows.Forms.Label
@@ -482,11 +484,11 @@ Partial Class frmVerEquipo
     Friend WithEvents BorrarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AñadirToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
-    Friend WithEvents DataGridView3 As System.Windows.Forms.DataGridView
+    Friend WithEvents dataGridMisc As System.Windows.Forms.DataGridView
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
+    Friend WithEvents dataGridUP As System.Windows.Forms.DataGridView
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents btnConnectIP As System.Windows.Forms.Button
+    Friend WithEvents dataGridIp As System.Windows.Forms.DataGridView
 End Class

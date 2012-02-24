@@ -102,28 +102,28 @@ Partial Class frmPrincipal
         '
         Me.LocalizaciónToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.map_magnify
         Me.LocalizaciónToolStripMenuItem.Name = "LocalizaciónToolStripMenuItem"
-        Me.LocalizaciónToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.LocalizaciónToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
         Me.LocalizaciónToolStripMenuItem.Text = "&Localización"
         '
         'EquipoToolStripMenuItem
         '
         Me.EquipoToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.computer
         Me.EquipoToolStripMenuItem.Name = "EquipoToolStripMenuItem"
-        Me.EquipoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EquipoToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
         Me.EquipoToolStripMenuItem.Text = "&Equipos"
         '
         'TécnicoToolStripMenuItem
         '
         Me.TécnicoToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.status_online
         Me.TécnicoToolStripMenuItem.Name = "TécnicoToolStripMenuItem"
-        Me.TécnicoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TécnicoToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
         Me.TécnicoToolStripMenuItem.Text = "&Técnicos"
         '
         'IncidenciasToolStripMenuItem1
         '
         Me.IncidenciasToolStripMenuItem1.Image = Global.Aurora.My.Resources.Resources.bug
         Me.IncidenciasToolStripMenuItem1.Name = "IncidenciasToolStripMenuItem1"
-        Me.IncidenciasToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.IncidenciasToolStripMenuItem1.Size = New System.Drawing.Size(141, 22)
         Me.IncidenciasToolStripMenuItem1.Text = "I&ncidencias"
         '
         'AyudaToolStripMenuItem
@@ -234,8 +234,11 @@ Partial Class frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Aurora.My.Resources.Resources.logo
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(892, 619)
         Me.Controls.Add(Me.menuPpal)
+        Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.menuPpal
