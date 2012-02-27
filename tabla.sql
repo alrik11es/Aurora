@@ -1,3 +1,25 @@
+CREATE TABLE IF NOT EXISTS `config_ip` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ip` varchar(25) NOT NULL,
+  `equipo` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+
+CREATE TABLE IF NOT EXISTS `config_pass` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `equipo` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+CREATE TABLE IF NOT EXISTS `config_varios` (
+  `id` int(11) NOT NULL,
+  `clave` varchar(255) NOT NULL,
+  `valor` text NOT NULL,
+  `equipo` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 CREATE TABLE IF NOT EXISTS  `tecnico` (
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 `usuario` VARCHAR( 45 ) NOT NULL ,

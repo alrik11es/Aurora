@@ -49,7 +49,6 @@ Partial Class frmVerEquipo
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.dataGridMisc = New System.Windows.Forms.DataGridView()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.dataGridUP = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnConnectIP = New System.Windows.Forms.Button()
@@ -302,12 +301,12 @@ Partial Class frmVerEquipo
         Me.dataGridMisc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dataGridMisc.Location = New System.Drawing.Point(6, 19)
         Me.dataGridMisc.Name = "dataGridMisc"
+        Me.dataGridMisc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dataGridMisc.Size = New System.Drawing.Size(487, 138)
         Me.dataGridMisc.TabIndex = 0
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.Button3)
         Me.GroupBox3.Controls.Add(Me.dataGridUP)
         Me.GroupBox3.Location = New System.Drawing.Point(218, 8)
         Me.GroupBox3.Name = "GroupBox3"
@@ -316,21 +315,13 @@ Partial Class frmVerEquipo
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Listado de usuarios y contraseñas"
         '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(33, 186)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(223, 23)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "Conectar a la IP con usuario y contraseña"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'dataGridUP
         '
         Me.dataGridUP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dataGridUP.Location = New System.Drawing.Point(6, 19)
         Me.dataGridUP.Name = "dataGridUP"
-        Me.dataGridUP.Size = New System.Drawing.Size(277, 161)
+        Me.dataGridUP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dataGridUP.Size = New System.Drawing.Size(277, 190)
         Me.dataGridUP.TabIndex = 3
         '
         'GroupBox2
@@ -486,7 +477,6 @@ Partial Class frmVerEquipo
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
     Friend WithEvents dataGridMisc As System.Windows.Forms.DataGridView
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents dataGridUP As System.Windows.Forms.DataGridView
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents btnConnectIP As System.Windows.Forms.Button
