@@ -10,10 +10,14 @@ Public Class frmVerEquipo
     Dim insert_num As Integer
 
     Private Sub loadDataGrid(ByVal query As String, ByVal table As String, ByVal datagrid As DataGridView)
-        command = New MySqlCommand(query, frmPrincipal.conexion.conn)
-        adapter = New MySqlDataAdapter(command)
-        dataset = New DataSet
-        adapter.Fill(dataset, table)
+        Try
+            command = New MySqlCommand(query, frmPrincipal.conexion.conn)
+            adapter = New MySqlDataAdapter(command)
+            dataset = New DataSet
+            adapter.Fill(dataset, table)
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Sub loadIP()
@@ -32,10 +36,21 @@ Public Class frmVerEquipo
     End Sub
 
     Sub loadMisc()
-        loadDataGrid("SELECT * FROM config_varios WHERE equipo = " & Me.id, "ip", dataGridMisc)
-        dataGridMisc.DataSource = dataset.Tables(0)
-        dataGridMisc.Columns(0).Visible = False
-        dataGridMisc.Columns(3).Visible = False
+        Try
+            loadDataGrid("SELECT * FROM config_varios WHERE equipo = " & Me.id, "ip", dataGridMisc)
+            dataGridMisc.DataSource = dataset.Tables(0)
+            dataGridMisc.Columns(0).Visible = False
+            dataGridMisc.Columns(3).Visible = False
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Sub loadHard()
+        loadDataGrid("SELECT * FROM config_hard WHERE equipo = " & Me.id, "hardw", dgHardware)
+        dgHardware.DataSource = dataset.Tables(0)
+        dgHardware.Columns(0).Visible = False
+        dgHardware.Columns(5).Visible = False
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
@@ -66,8 +81,18 @@ Public Class frmVerEquipo
         Me.Text = "Equipo: " & recordset.GetString("nombre")
         lblNombre.Text = "Nombre de equipo: " & recordset.GetString("nombre")
         txtNotas.Text = recordset.GetString("notas")
-        lblTipo.Text = "Tipo de equipo: " & frmEditarEquipo.slTipo.Items(recordset.GetString("tipo")).ToString
-        lblSO.Text = "Sistema operativo: " & frmAddEquipo.cbSOperativo.Items.Item(recordset.GetString("so")).ToString
+        If recordset.GetString("tipo") >= 0 Then
+            lblTipo.Text = "Tipo de equipo: " & frmEditarEquipo.slTipo.Items(recordset.GetString("tipo")).ToString
+        Else
+            lblTipo.Text = "No hay especificado"
+        End If
+
+        If recordset.GetString("so") >= 0 Then
+            lblSO.Text = "Sistema operativo: " & frmAddEquipo.cbSOperativo.Items.Item(recordset.GetString("so")).ToString
+        Else
+            lblSO.Text = "No hay especificado"
+        End If
+
         lblFecha.Text = "Fecha de instalación: " & recordset.GetString("fecha_instalacion")
         Me.localizacion = recordset.GetString("localizacion")
         recordset.Close()
@@ -79,6 +104,7 @@ Public Class frmVerEquipo
         loadIP()
         loadUsr()
         loadMisc()
+        loadHard()
     End Sub
 
     ' IP's DEL EQUIPO
@@ -172,6 +198,38 @@ Public Class frmVerEquipo
     Private Sub dataGridMisc_UserDeletingRow(sender As System.Object, e As System.Windows.Forms.DataGridViewRowCancelEventArgs) Handles dataGridMisc.UserDeletingRow
         Dim row_id As Integer = e.Row.Cells("id").Value
         recordset = frmPrincipal.conexion.exec("DELETE FROM config_varios WHERE id = '" & row_id & "'")
+        recordset.Close()
+    End Sub
+
+    ' HARDWARE
+    Private Sub dgHardware_UserAddedRow(sender As System.Object, e As System.Windows.Forms.DataGridViewRowEventArgs) Handles dgHardware.UserAddedRow
+        recordset = frmPrincipal.conexion.exec("INSERT INTO config_hard SET equipo = '" & Me.id & "'")
+        recordset.Close()
+        recordset = frmPrincipal.conexion.exec("SELECT LAST_INSERT_ID() as ult FROM config_hard")
+        insert_num = recordset.GetValue(0)
+        recordset.Close()
+    End Sub
+
+    Private Sub dgHardware_CellValueChanged(sender As System.Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgHardware.CellValueChanged
+        Dim ip_row As Integer
+        If IsDBNull(dgHardware.Rows(e.RowIndex).Cells("id").Value) Then
+            ip_row = insert_num
+        Else
+            ip_row = dgHardware.Rows(e.RowIndex).Cells("id").Value
+        End If
+
+        Dim componente As String = dgHardware.Rows(e.RowIndex).Cells(1).Value.ToString
+        Dim numero_referencia As String = dgHardware.Rows(e.RowIndex).Cells(2).Value.ToString
+        Dim fecha_instalacion As String = dgHardware.Rows(e.RowIndex).Cells(3).Value.ToString
+        Dim garantia As String = dgHardware.Rows(e.RowIndex).Cells(4).Value.ToString
+        recordset = frmPrincipal.conexion.exec("UPDATE config_hard SET componente='" & componente & "',numero_referencia='" & numero_referencia & "',fecha_instalacion='" & fecha_instalacion & "', garantia='" & garantia & "', equipo = '" & Me.id & "' WHERE id = " & ip_row)
+        recordset.Close()
+        loadMisc()
+    End Sub
+
+    Private Sub dgHardware_UserDeletingRow(sender As System.Object, e As System.Windows.Forms.DataGridViewRowCancelEventArgs) Handles dgHardware.UserDeletingRow
+        Dim row_id As Integer = e.Row.Cells("id").Value
+        recordset = frmPrincipal.conexion.exec("DELETE FROM config_hard WHERE id = '" & row_id & "'")
         recordset.Close()
     End Sub
 End Class

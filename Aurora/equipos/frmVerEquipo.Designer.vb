@@ -42,6 +42,7 @@ Partial Class frmVerEquipo
         Me.btnConnectIP = New System.Windows.Forms.Button()
         Me.dataGridIp = New System.Windows.Forms.DataGridView()
         Me.tabHardware = New System.Windows.Forms.TabPage()
+        Me.dgHardware = New System.Windows.Forms.DataGridView()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.tabEquipo = New System.Windows.Forms.TabPage()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -64,6 +65,7 @@ Partial Class frmVerEquipo
         Me.GroupBox2.SuspendLayout()
         CType(Me.dataGridIp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabHardware.SuspendLayout()
+        CType(Me.dgHardware, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabEquipo.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -229,6 +231,7 @@ Partial Class frmVerEquipo
         '
         'tabHardware
         '
+        Me.tabHardware.Controls.Add(Me.dgHardware)
         Me.tabHardware.Controls.Add(Me.ListView1)
         Me.tabHardware.Location = New System.Drawing.Point(4, 22)
         Me.tabHardware.Name = "tabHardware"
@@ -236,6 +239,16 @@ Partial Class frmVerEquipo
         Me.tabHardware.TabIndex = 2
         Me.tabHardware.Text = "Hardware"
         Me.tabHardware.UseVisualStyleBackColor = True
+        '
+        'dgHardware
+        '
+        Me.dgHardware.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgHardware.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgHardware.Location = New System.Drawing.Point(0, 0)
+        Me.dgHardware.Name = "dgHardware"
+        Me.dgHardware.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgHardware.Size = New System.Drawing.Size(515, 401)
+        Me.dgHardware.TabIndex = 1
         '
         'ListView1
         '
@@ -392,6 +405,7 @@ Partial Class frmVerEquipo
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.dataGridIp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabHardware.ResumeLayout(False)
+        CType(Me.dgHardware, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabEquipo.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -430,4 +444,5 @@ Partial Class frmVerEquipo
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents lblNombre As System.Windows.Forms.Label
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents dgHardware As System.Windows.Forms.DataGridView
 End Class
