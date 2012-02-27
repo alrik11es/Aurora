@@ -32,7 +32,6 @@ Partial Class frmPrincipal
         Me.LocalizaciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EquipoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TécnicoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.IncidenciasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VerLaAyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -92,7 +91,7 @@ Partial Class frmPrincipal
         '
         'menuItemVentana
         '
-        Me.menuItemVentana.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LocalizaciónToolStripMenuItem, Me.EquipoToolStripMenuItem, Me.TécnicoToolStripMenuItem, Me.IncidenciasToolStripMenuItem1})
+        Me.menuItemVentana.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LocalizaciónToolStripMenuItem, Me.EquipoToolStripMenuItem, Me.TécnicoToolStripMenuItem})
         Me.menuItemVentana.Enabled = False
         Me.menuItemVentana.Name = "menuItemVentana"
         Me.menuItemVentana.Size = New System.Drawing.Size(59, 20)
@@ -102,29 +101,22 @@ Partial Class frmPrincipal
         '
         Me.LocalizaciónToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.map_magnify
         Me.LocalizaciónToolStripMenuItem.Name = "LocalizaciónToolStripMenuItem"
-        Me.LocalizaciónToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.LocalizaciónToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.LocalizaciónToolStripMenuItem.Text = "&Localización"
         '
         'EquipoToolStripMenuItem
         '
         Me.EquipoToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.computer
         Me.EquipoToolStripMenuItem.Name = "EquipoToolStripMenuItem"
-        Me.EquipoToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.EquipoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EquipoToolStripMenuItem.Text = "&Equipos"
         '
         'TécnicoToolStripMenuItem
         '
         Me.TécnicoToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.status_online
         Me.TécnicoToolStripMenuItem.Name = "TécnicoToolStripMenuItem"
-        Me.TécnicoToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.TécnicoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TécnicoToolStripMenuItem.Text = "&Técnicos"
-        '
-        'IncidenciasToolStripMenuItem1
-        '
-        Me.IncidenciasToolStripMenuItem1.Image = Global.Aurora.My.Resources.Resources.bug
-        Me.IncidenciasToolStripMenuItem1.Name = "IncidenciasToolStripMenuItem1"
-        Me.IncidenciasToolStripMenuItem1.Size = New System.Drawing.Size(141, 22)
-        Me.IncidenciasToolStripMenuItem1.Text = "I&ncidencias"
         '
         'AyudaToolStripMenuItem
         '
@@ -272,7 +264,6 @@ Partial Class frmPrincipal
     Friend WithEvents menuItemConectar As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConfigurarMySQLToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents IncidenciasToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AyudaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents VerLaAyudaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AcercaDeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

@@ -22,104 +22,45 @@ Partial Class frmUsuarios
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnModificar = New System.Windows.Forms.Button()
-        Me.btnBorrar = New System.Windows.Forms.Button()
-        Me.btnCrear = New System.Windows.Forms.Button()
-        Me.btnLimpiar = New System.Windows.Forms.Button()
-        Me.btnSalir = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.MiConUsuUsuarios = New Aurora.MiConUsuUsuarios()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.usr = New System.Windows.Forms.DataGridView()
+        Me.usuarios = New System.Windows.Forms.DataGridView()
+        CType(Me.usr, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.usuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'btnModificar
+        'usr
         '
-        Me.btnModificar.Location = New System.Drawing.Point(150, 285)
-        Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(75, 23)
-        Me.btnModificar.TabIndex = 1
-        Me.btnModificar.Text = "Modificar"
-        Me.btnModificar.UseVisualStyleBackColor = True
+        Me.usr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.usr.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.usr.Location = New System.Drawing.Point(0, 0)
+        Me.usr.Name = "usr"
+        Me.usr.Size = New System.Drawing.Size(470, 360)
+        Me.usr.TabIndex = 6
         '
-        'btnBorrar
+        'usuarios
         '
-        Me.btnBorrar.Location = New System.Drawing.Point(277, 285)
-        Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(75, 23)
-        Me.btnBorrar.TabIndex = 2
-        Me.btnBorrar.Text = "Borrar"
-        Me.btnBorrar.UseVisualStyleBackColor = True
-        '
-        'btnCrear
-        '
-        Me.btnCrear.Location = New System.Drawing.Point(29, 285)
-        Me.btnCrear.Name = "btnCrear"
-        Me.btnCrear.Size = New System.Drawing.Size(75, 23)
-        Me.btnCrear.TabIndex = 3
-        Me.btnCrear.Text = "Crear"
-        Me.btnCrear.UseVisualStyleBackColor = True
-        '
-        'btnLimpiar
-        '
-        Me.btnLimpiar.Location = New System.Drawing.Point(91, 367)
-        Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(75, 23)
-        Me.btnLimpiar.TabIndex = 4
-        Me.btnLimpiar.Text = "Limpiar"
-        Me.btnLimpiar.UseVisualStyleBackColor = True
-        '
-        'btnSalir
-        '
-        Me.btnSalir.Location = New System.Drawing.Point(224, 367)
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(45, 23)
-        Me.btnSalir.TabIndex = 5
-        Me.btnSalir.Text = "Salir"
-        Me.btnSalir.UseVisualStyleBackColor = True
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(184, 87)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
-        Me.DataGridView1.TabIndex = 6
-        '
-        'MiConUsuUsuarios
-        '
-        Me.MiConUsuUsuarios.Email = ""
-        Me.MiConUsuUsuarios.Location = New System.Drawing.Point(12, 12)
-        Me.MiConUsuUsuarios.Name = "MiConUsuUsuarios"
-        Me.MiConUsuUsuarios.password = ""
-        Me.MiConUsuUsuarios.Size = New System.Drawing.Size(412, 252)
-        Me.MiConUsuUsuarios.TabIndex = 0
-        Me.MiConUsuUsuarios.Telefono = ""
-        Me.MiConUsuUsuarios.usuario = ""
+        Me.usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.usuarios.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.usuarios.Location = New System.Drawing.Point(0, 0)
+        Me.usuarios.Name = "usuarios"
+        Me.usuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.usuarios.Size = New System.Drawing.Size(565, 384)
+        Me.usuarios.TabIndex = 0
         '
         'frmUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(436, 430)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.btnSalir)
-        Me.Controls.Add(Me.btnLimpiar)
-        Me.Controls.Add(Me.btnCrear)
-        Me.Controls.Add(Me.btnBorrar)
-        Me.Controls.Add(Me.btnModificar)
-        Me.Controls.Add(Me.MiConUsuUsuarios)
+        Me.ClientSize = New System.Drawing.Size(565, 384)
+        Me.Controls.Add(Me.usuarios)
         Me.Name = "frmUsuarios"
         Me.Text = "Técnicos"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.usr, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.usuarios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents MiConUsuUsuarios As Aurora.MiConUsuUsuarios
-    Friend WithEvents btnModificar As System.Windows.Forms.Button
-    Friend WithEvents btnBorrar As System.Windows.Forms.Button
-    Friend WithEvents btnCrear As System.Windows.Forms.Button
-    Friend WithEvents btnLimpiar As System.Windows.Forms.Button
-    Friend WithEvents btnSalir As System.Windows.Forms.Button
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents usr As System.Windows.Forms.DataGridView
+    Friend WithEvents usuarios As System.Windows.Forms.DataGridView
 End Class

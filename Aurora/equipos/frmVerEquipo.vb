@@ -67,7 +67,7 @@ Public Class frmVerEquipo
         lblNombre.Text = "Nombre de equipo: " & recordset.GetString("nombre")
         txtNotas.Text = recordset.GetString("notas")
         lblTipo.Text = "Tipo de equipo: " & frmEditarEquipo.slTipo.Items(recordset.GetString("tipo")).ToString
-        lblSO.Text = "Sistema operativo: " & recordset.GetString("so")
+        lblSO.Text = "Sistema operativo: " & frmAddEquipo.cbSOperativo.Items.Item(recordset.GetString("so")).ToString
         lblFecha.Text = "Fecha de instalación: " & recordset.GetString("fecha_instalacion")
         Me.localizacion = recordset.GetString("localizacion")
         recordset.Close()

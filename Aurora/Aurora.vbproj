@@ -52,7 +52,7 @@
     <ApplicationIcon>aurora.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.3.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -156,12 +156,6 @@
     <Compile Include="usuarios\frmUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="usuarios\MiControlUsuario.Designer.vb">
-      <DependentUpon>MiControlUsuario.vb</DependentUpon>
-    </Compile>
-    <Compile Include="usuarios\MiControlUsuario.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -219,9 +213,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="usuarios\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="usuarios\MiControlUsuario.resx">
-      <DependentUpon>MiControlUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
