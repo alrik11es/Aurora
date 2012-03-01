@@ -10,9 +10,9 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("Aurora")> 
 <Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("ColdStar Studios")> 
+<Assembly: AssemblyCompany("Cold Star Studios")> 
 <Assembly: AssemblyProduct("Aurora")> 
-<Assembly: AssemblyCopyright("Copyright © ColdStar Studios 2012")> 
+<Assembly: AssemblyCopyright("Copyright © Cold Star Studios 2012")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>

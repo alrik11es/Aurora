@@ -8,5 +8,9 @@
 	<param name="ImageType" value="Folder">
 </OBJECT>
 <UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Inicio">
+		<param name="Local" value="Untitled1.htm">
+		</OBJECT>
 </UL>
 </BODY></HTML>

@@ -28,13 +28,16 @@
 
     Private Sub menuItemConectar_Click(sender As System.Object, e As System.EventArgs) Handles menuItemConectar.Click
 
-        If menuItemConectar.Text <> "Desconectar" Then
+        If menuItemConectar.Text <> "Desconectar..." Then
             connect()
         Else
             menuItemConectar.Text = "&Conectar..."
             menuItemVentana.Enabled = False
+            For i = 0 To Me.MdiChildren.Length - 1
+                Me.MdiChildren(i).Close()
+            Next
         End If
-        
+
     End Sub
 
     Private Sub LocalizaciónToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles LocalizaciónToolStripMenuItem.Click
@@ -55,5 +58,10 @@
     Private Sub TécnicoToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles TécnicoToolStripMenuItem.Click
         frmUsuarios.MdiParent = Me
         frmUsuarios.Show()
+    End Sub
+
+    Private Sub AcercaDeToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles AcercaDeToolStripMenuItem.Click
+        frmAbout.MdiParent = Me
+        frmAbout.Show()
     End Sub
 End Class

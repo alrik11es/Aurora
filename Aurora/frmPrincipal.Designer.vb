@@ -101,21 +101,21 @@ Partial Class frmPrincipal
         '
         Me.LocalizaciónToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.map_magnify
         Me.LocalizaciónToolStripMenuItem.Name = "LocalizaciónToolStripMenuItem"
-        Me.LocalizaciónToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.LocalizaciónToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
         Me.LocalizaciónToolStripMenuItem.Text = "&Localización"
         '
         'EquipoToolStripMenuItem
         '
         Me.EquipoToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.computer
         Me.EquipoToolStripMenuItem.Name = "EquipoToolStripMenuItem"
-        Me.EquipoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EquipoToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
         Me.EquipoToolStripMenuItem.Text = "&Equipos"
         '
         'TécnicoToolStripMenuItem
         '
         Me.TécnicoToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.status_online
         Me.TécnicoToolStripMenuItem.Name = "TécnicoToolStripMenuItem"
-        Me.TécnicoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TécnicoToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
         Me.TécnicoToolStripMenuItem.Text = "&Técnicos"
         '
         'AyudaToolStripMenuItem
@@ -135,6 +135,7 @@ Partial Class frmPrincipal
         '
         'AcercaDeToolStripMenuItem
         '
+        Me.AcercaDeToolStripMenuItem.Image = Global.Aurora.My.Resources.Resources.information
         Me.AcercaDeToolStripMenuItem.Name = "AcercaDeToolStripMenuItem"
         Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(189, 22)
         Me.AcercaDeToolStripMenuItem.Text = "Acerca de Aurora"
